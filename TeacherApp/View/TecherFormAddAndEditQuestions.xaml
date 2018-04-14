@@ -65,7 +65,20 @@
         </ListBox>
         <Button Grid.Row="4" Grid.Column="0" HorizontalAlignment="Center" Content="Добавить" Margin="20" Foreground="White" FontWeight="Bold" FontSize="28" Background="LightSlateGray" BorderThickness="2" BorderBrush="DimGray"  Command="{Binding AddAnswerCommand}"  />
         <Button Grid.Row="4" Grid.Column="1" HorizontalAlignment="Center" Content="Удалить" Margin="20" Foreground="White" FontWeight="Bold" FontSize="28" Background="LightSlateGray" BorderThickness="2" BorderBrush="DimGray" Command="{Binding DeleteCommand}"  />
-        <Button Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" Content="Готово" Margin="5" Foreground="White" FontWeight="Bold" FontSize="28" Background="LightSlateGray" BorderThickness="2" BorderBrush="DimGray" Command="{Binding OkCommand}"  />
-        <Button Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" Content="Отмена" Margin="5" Foreground="White" FontWeight="Bold" FontSize="28" Background="LightSlateGray" BorderThickness="2" BorderBrush="DimGray" Command="{Binding CancelCommand}"  />
+
+        <Grid Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/> 
+                <RowDefinition Height="Auto"/> 
+            </Grid.RowDefinitions>
+            <Button Grid.Row="0"  Grid.Column="1"  Content="Готово" Margin="5" Foreground="White" FontWeight="Bold" FontSize="28" Background="LightSlateGray" BorderThickness="2" BorderBrush="DimGray" Command="{Binding OkCommand}"  />
+            <Button Grid.Row="1"  Grid.Column="1" Content="Отмена" Margin="5" Foreground="White" FontWeight="Bold" FontSize="28" Background="LightSlateGray" BorderThickness="2" BorderBrush="DimGray" Command="{Binding CancelCommand}"  />
+        </Grid >
+        
     </Grid>
 </Window>
