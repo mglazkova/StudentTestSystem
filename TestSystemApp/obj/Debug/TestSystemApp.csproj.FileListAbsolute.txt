@@ -50,4 +50,3 @@ D:\GITHUB\StudentTestSystem\TestSystemApp\obj\Debug\TestSystemApp.Properties.Res
 D:\GITHUB\StudentTestSystem\TestSystemApp\obj\Debug\TestSystemApp.csproj.GenerateResource.Cache
 D:\GITHUB\StudentTestSystem\TestSystemApp\obj\Debug\TestSystemApp.exe
 D:\GITHUB\StudentTestSystem\TestSystemApp\obj\Debug\TestSystemApp.pdb
-D:\GITHUB\StudentTestSystem\TestSystemApp\obj\Debug\TestSystemApp.csprojResolveAssemblyReference.cache
