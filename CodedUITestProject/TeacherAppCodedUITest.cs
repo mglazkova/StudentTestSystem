@@ -1,0 +1,111 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text.RegularExpressions;
+using System.Windows.Input;
+using System.Windows.Forms;
+using System.Drawing;
+using Microsoft.VisualStudio.TestTools.UITesting;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Microsoft.VisualStudio.TestTools.UITest.Extension;
+using Keyboard = Microsoft.VisualStudio.TestTools.UITesting.Keyboard;
+
+
+namespace CodedUITestProject
+{
+    /// <summary>
+    /// Summary description for CodedUITest1
+    /// </summary>
+    [CodedUITest]
+    public class TeacherAppCodedUITest
+    {
+        public TeacherAppCodedUITest()
+        {
+        }
+
+        /// <summary>
+        ///Gets or sets the test context which provides
+        ///information about and functionality for the current test run.
+        ///</summary>
+        public TestContext TestContext
+        {
+            get
+            {
+                return testContextInstance;
+            }
+            set
+            {
+                testContextInstance = value;
+            }
+        }
+        private TestContext testContextInstance;
+
+        [TestInitialize]
+        public void StartTeacherApp()
+        {
+            UIMap.StartTeacherRecordedMethod();
+        }
+
+
+        [TestCleanup]
+        public void CloseApp()
+        {
+
+            this.UIMap.CloseTeacherAppRecordedMethod();
+
+        }
+
+        public UIMap UIMap
+        {
+            get
+            {
+                if ((this.map == null))
+                {
+                    this.map = new UIMap();
+                }
+
+                return this.map;
+            }
+        }
+
+        private UIMap map;
+
+
+        #region Тестовые сценарии
+
+        #region Визуальная проверка интерфейса
+
+
+        //Testcase 1.1
+        [TestMethod]
+        public void TeacherAppUICheck()
+        {
+            UIMap.TestDisciplineNameCheck();
+            UIMap.EditTestButtonExistMethod();
+            UIMap.ResultButtonAssertMethod();
+            UIMap.AboutAssertMethod();
+            UIMap.StatusBarAssertMethod();
+        }
+
+        //Testcase 1.2
+        [TestMethod]
+        public void TestEditUICheck()
+        {
+
+            this.UIMap.TestEditViewOpenRecordedMethod();
+
+            this.UIMap.AddEditBtnAssertMethod();
+            this.UIMap.TestParamAssertMethod();
+            this.UIMap.BackBtnAssertMethod();
+
+
+            this.UIMap.TestEditBackRecordedMethod();
+        }
+
+        #endregion
+
+
+
+        #endregion Тестовые сценарии
+
+    }
+}
