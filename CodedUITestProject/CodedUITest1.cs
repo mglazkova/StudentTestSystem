@@ -64,5 +64,35 @@ namespace CodedUITestProject
             }
         }
         private TestContext testContextInstance;
+
+        [TestInitialize]
+        public void StartTeacherApp()
+        {
+            UIMap.StartTeacherRecordedMethod();
+        }
+
+
+        [TestCleanup]
+        public void CloseApp()
+        {
+
+            this.UIMap.CloseTeacherAppRecordedMethod();
+
+        }
+
+        public UIMap UIMap
+        {
+            get
+            {
+                if ((this.map == null))
+                {
+                    this.map = new UIMap();
+                }
+
+                return this.map;
+            }
+        }
+
+        private UIMap map;
     }
 }
