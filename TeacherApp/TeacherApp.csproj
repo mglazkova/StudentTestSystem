@@ -172,12 +172,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WCFServiceLibrary\WCFServiceLibrary.csproj">
-      <Project>{7cbf05eb-40ba-4e2e-b77b-8a2e7a034955}</Project>
-      <Name>WCFServiceLibrary</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Image\TeacherAppLogo.ico" />
   </ItemGroup>
   <ItemGroup />
