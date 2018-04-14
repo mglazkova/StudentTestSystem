@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-D:\GITHUB\StudentTestSystem\TeacherApp\obj\Debug\
+D:\GitHub\StudentTestSystem\TeacherApp\obj\Debug\
 TeacherApp
 none
 false
 DEBUG;TRACE
-D:\GITHUB\StudentTestSystem\TeacherApp\App.xaml
+D:\GitHub\StudentTestSystem\TeacherApp\App.xaml
 7-313516745
 1-1909764963
-32-530794795
-171140291553
+321768127790
+172113481833
 MainWindow.xaml;View\ResultView.xaml;View\TeacherAddAndEditQuestions.xaml;View\TeacherFunctionsView.xaml;View\TeacherParametersTest.xaml;View\TeacherStartView.xaml;View\TecherFormAddAndEditQuestions.xaml;
 
 True
