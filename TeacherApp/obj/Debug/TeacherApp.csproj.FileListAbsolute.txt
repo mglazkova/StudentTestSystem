@@ -34,3 +34,6 @@ C:\Users\glazkov.d\Source\Repos\StudentTestSystem2\TeacherApp\obj\Debug\TeacherA
 C:\Users\glazkov.d\Desktop\StudentTestSystem5\TeacherApp\bin\Debug\TeacherApp.exe.config
 C:\Users\glazkov.d\Desktop\StudentTestSystem5\TeacherApp\obj\Debug\TeacherApp.exe
 C:\Users\glazkov.d\Desktop\StudentTestSystem5\TeacherApp\obj\Debug\TeacherApp.pdb
+D:\GITHUB\StudentTestSystem\TeacherApp\bin\Debug\TeacherApp.exe.config
+D:\GITHUB\StudentTestSystem\TeacherApp\obj\Debug\TeacherApp.exe
+D:\GITHUB\StudentTestSystem\TeacherApp\obj\Debug\TeacherApp.pdb
