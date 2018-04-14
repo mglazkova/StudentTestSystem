@@ -51,10 +51,8 @@ namespace CodedUITestProject
         [TestCleanup]
         public void CloseApp()
         {
-
             this.UIMap.CloseTeacherAppRecordedMethod();
-
-        }
+            }
 
         public UIMap UIMap
         {
@@ -158,13 +156,18 @@ namespace CodedUITestProject
         public void AddNewQuestionViewCheck()
         {
             UIMap.OpneEditWindowRecordedMethod();
+
             this.UIMap.NewQuestionWindowOpenRecordedMethod();
+
             this.UIMap.QuestionNameTextFieldAssertMethod();
             this.UIMap.AnswerFiledAssertMethod();
             this.UIMap.AddAnswerBtnExistEnableAssertMethod();
             this.UIMap.AnswerDeleteBtnExistEnabledAssertMethod();
+
             this.UIMap.NewQuestionOkBtnExistAssertMethod();
             this.UIMap.NewQuestionCancelBtnExistAssertMethod();
+
+            this.UIMap.AddQuestionCancelRecordedMethod();
         }
 
         #endregion Возможность редактирования теста

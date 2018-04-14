@@ -17,6 +17,8 @@ namespace TeacherApp
     {
         private void Application_Startup(object sender, StartupEventArgs e)
         {
+
+            //Написать код про необработанные исключения
             
         }
     }

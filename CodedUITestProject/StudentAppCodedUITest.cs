@@ -20,6 +20,8 @@ namespace CodedUITestProject
     {
         public StudentAppCodedUITest()
         {
+
+
         }
 
         /// <summary>
@@ -38,5 +40,7 @@ namespace CodedUITestProject
             }
         }
         private TestContext testContextInstance;
+
+
     }
 }

@@ -48,8 +48,12 @@ namespace CodedUITestProject
         /// </summary>
         public void CloseTeacherAppRecordedMethod()
         {
+            #region Variable Declarations
+            WinButton uICloseButton = this.UIСетевыеинформационныWindow.UICloseButton;
+            #endregion
 
-            // The last action was not recorded because access to the application was denied.
+            // Click 'Close' button
+            Mouse.Click(uICloseButton, new Point(8, 9));
         }
         
         /// <summary>
@@ -559,6 +563,19 @@ namespace CodedUITestProject
 
             // Verify that the 'Exists' property of 'Отмена' button equals 'True'
             Assert.AreEqual(this.NewQuestionCancelBtnExistAssertMethodExpectedValues.UIОтменаButtonExists, uIОтменаButton.Exists, "Кнопка \"Отмена\" не найдена");
+        }
+        
+        /// <summary>
+        /// AddQuestionCancelRecordedMethod
+        /// </summary>
+        public void AddQuestionCancelRecordedMethod()
+        {
+            #region Variable Declarations
+            WpfButton uIОтменаButton = this.UIWpfWindow.UIОтменаButton;
+            #endregion
+
+            // Click 'Отмена' button
+            Mouse.Click(uIОтменаButton, new Point(78, 13));
         }
         
         #region Properties
