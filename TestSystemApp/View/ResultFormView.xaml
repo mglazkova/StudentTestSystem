@@ -50,7 +50,7 @@
             <TextBlock Margin="3" Grid.Row="3" Text="{Binding CountResultMessage}" Foreground="LightSlateGray" FontStyle="Italic" FontSize="26" FontWeight="Bold" />
             <TextBlock Margin="3" Grid.Row="4" Text="{Binding PersentResultMessage}" Foreground="LightSlateGray" FontStyle="Italic" FontSize="26" FontWeight="Bold" />
             <TextBlock Margin="3" Grid.Row="5" Text="{Binding GradeResultMessage}" Foreground="LightSlateGray" FontStyle="Italic" FontSize="26" FontWeight="Bold" />
-            <Button x:Name="finishTestBtn" Margin="25" Grid.Row="6" Content="Завершить тест" BorderThickness="2" BorderBrush="DimGray" Background="LightSlateGray" FontSize="28" Foreground="White" FontWeight="Medium" HorizontalAlignment="Center" Command="{Binding FinishTestCommand}" /> 
+            <Button Margin="25" Grid.Row="6" Content="Завершить тест" BorderThickness="2" BorderBrush="DimGray" Background="LightSlateGray" FontSize="28" Foreground="White" FontWeight="Medium" HorizontalAlignment="Center" Command="{Binding FinishTestCommand}" /> 
         </Grid>
 
 
