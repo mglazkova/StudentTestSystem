@@ -6,3 +6,9 @@ D:\GITHUB\StudentTestSystem\CodedUITestProject\bin\Debug\CodedUITestProject.dll
 D:\GITHUB\StudentTestSystem\CodedUITestProject\bin\Debug\CodedUITestProject.pdb
 D:\GITHUB\StudentTestSystem\CodedUITestProject\obj\Debug\CodedUITestProject.dll
 D:\GITHUB\StudentTestSystem\CodedUITestProject\obj\Debug\CodedUITestProject.pdb
+D:\GITHUB\StudentTestSystem\CodedUITestProject\obj\Debug\CodedUITestProject.csprojResolveAssemblyReference.cache
+D:\GITHUB\StudentTestSystemV2\StudentTestSystem\CodedUITestProject\bin\Debug\CodedUITestProject.dll
+D:\GITHUB\StudentTestSystemV2\StudentTestSystem\CodedUITestProject\bin\Debug\CodedUITestProject.pdb
+D:\GITHUB\StudentTestSystemV2\StudentTestSystem\CodedUITestProject\obj\Debug\CodedUITestProject.csprojResolveAssemblyReference.cache
+D:\GITHUB\StudentTestSystemV2\StudentTestSystem\CodedUITestProject\obj\Debug\CodedUITestProject.dll
+D:\GITHUB\StudentTestSystemV2\StudentTestSystem\CodedUITestProject\obj\Debug\CodedUITestProject.pdb

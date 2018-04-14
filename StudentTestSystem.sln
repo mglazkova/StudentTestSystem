@@ -4,6 +4,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestSystemApp", "TestSystemApp\TestSystemApp.csproj", "{9ED457C8-0F88-4425-857E-D186ABFEFB1B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7CBF05EB-40BA-4E2E-B77B-8A2E7A034955} = {7CBF05EB-40BA-4E2E-B77B-8A2E7A034955}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCFServiceLibrary", "WCFServiceLibrary\WCFServiceLibrary.csproj", "{7CBF05EB-40BA-4E2E-B77B-8A2E7A034955}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeacherApp", "TeacherApp\TeacherApp.csproj", "{4F811B57-83DE-4473-897C-EC90F98EA59F}"
 EndProject
@@ -26,6 +31,10 @@ Global
 		{9ED457C8-0F88-4425-857E-D186ABFEFB1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9ED457C8-0F88-4425-857E-D186ABFEFB1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9ED457C8-0F88-4425-857E-D186ABFEFB1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CBF05EB-40BA-4E2E-B77B-8A2E7A034955}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CBF05EB-40BA-4E2E-B77B-8A2E7A034955}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CBF05EB-40BA-4E2E-B77B-8A2E7A034955}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CBF05EB-40BA-4E2E-B77B-8A2E7A034955}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4F811B57-83DE-4473-897C-EC90F98EA59F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4F811B57-83DE-4473-897C-EC90F98EA59F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4F811B57-83DE-4473-897C-EC90F98EA59F}.Release|Any CPU.ActiveCfg = Release|Any CPU
