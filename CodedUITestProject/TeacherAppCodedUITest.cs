@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
 using System.Text.RegularExpressions;
 using System.Windows.Input;
 using System.Windows.Forms;
@@ -101,9 +103,71 @@ namespace CodedUITestProject
             this.UIMap.TestEditBackRecordedMethod();
         }
 
+        //Testcase 1.3
+        [TestMethod]
+        public void BackFromFunctionViewCheck()
+        {
+            this.UIMap.TestEditFormShowMethod();
+            this.UIMap.BackBtnAddEditAssertMethod();
+        }
+
         #endregion
 
+        #region Возможность редактирования теста
+        //Testcase 2
+        [TestMethod]
+        public void TestEditFormUICheck()
+        {
 
+            this.UIMap.TestEditFormShowMethod();
+
+            this.UIMap.EditButtonEnabledAssertMethod();
+            this.UIMap.DeleteBtnEnabledAssertMethod();
+
+
+            this.UIMap.NewBtnAssertMethod();
+            this.UIMap.BackBtnAddEditAssertMethod();
+
+        }
+
+        /// <summary>
+        /// "Проверка доступности кнопок 'Добавить' и 'Удалить
+        /// </summary>
+
+
+        //Testcase 2.1
+        [TestMethod()]
+        public void TestEditFormBtnEnabledCheck()
+        {
+
+            UIMap.OpneEditWindowRecordedMethod();
+
+            this.UIMap.EditButtonEnabledAssertMethod();
+            this.UIMap.DeleteBtnEnabledAssertMethod();
+
+            this.UIMap.QuestionItemSelectRecordedMethod();
+            this.UIMap.EditBtnQuestionSelectedEnableAssertMethod();
+            this.UIMap.DeleteBtnQuestionSelectedEnableAssertMethod();
+
+            this.UIMap.BackBtnAddEditAssertMethod();
+
+        }
+
+        //Testcase 2.2.1
+        [TestMethod()]
+        public void AddNewQuestionViewCheck()
+        {
+            UIMap.OpneEditWindowRecordedMethod();
+            this.UIMap.NewQuestionWindowOpenRecordedMethod();
+            this.UIMap.QuestionNameTextFieldAssertMethod();
+            this.UIMap.AnswerFiledAssertMethod();
+            this.UIMap.AddAnswerBtnExistEnableAssertMethod();
+            this.UIMap.AnswerDeleteBtnExistEnabledAssertMethod();
+            this.UIMap.NewQuestionOkBtnExistAssertMethod();
+            this.UIMap.NewQuestionCancelBtnExistAssertMethod();
+        }
+
+        #endregion Возможность редактирования теста
 
         #endregion Тестовые сценарии
 

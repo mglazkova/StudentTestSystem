@@ -20,8 +20,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeacherApp", "TeacherApp\Te
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "DatabaseProject", "DatabaseProject\DatabaseProject.sqlproj", "{10561B36-BB00-44AC-8344-0037CD950F3D}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CodedTests", "CodedTests", "{C63F1FEA-8798-49C6-A37C-562767D44532}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodedUITestProject", "CodedUITestProject\CodedUITestProject.csproj", "{BE46016A-DDC6-4E4D-9F62-0C2F766AB3E7}"
 EndProject
 Global
@@ -55,8 +53,5 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{BE46016A-DDC6-4E4D-9F62-0C2F766AB3E7} = {C63F1FEA-8798-49C6-A37C-562767D44532}
 	EndGlobalSection
 EndGlobal

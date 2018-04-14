@@ -48,7 +48,7 @@
                 </ComboBox.ItemTemplate>    
             </ComboBox>
 
-            <Button Grid.Column="3" Margin="5" Content="Обновить" Background="LightSlateGray" BorderThickness="2"  BorderBrush="DimGray" FontSize="16" FontWeight="Medium" Foreground="White" Command="{Binding RefreshCommand}" />
+            <Button x:Name="refreshBtn" Grid.Column="3" Margin="5" Content="Обновить" Background="LightSlateGray" BorderThickness="2"  BorderBrush="DimGray" FontSize="16" FontWeight="Medium" Foreground="White" Command="{Binding RefreshCommand}" />
             
         </Grid>
         

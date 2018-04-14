@@ -1,0 +1,7 @@
+C:\Users\glazkov.d\Source\Repos\StudentTestSystem2\WCFServiceLibrary\bin\Debug\WCFServiceLibrary.dll.config
+C:\Users\glazkov.d\Source\Repos\StudentTestSystem2\WCFServiceLibrary\bin\Debug\WCFServiceLibrary.dll
+C:\Users\glazkov.d\Source\Repos\StudentTestSystem2\WCFServiceLibrary\bin\Debug\WCFServiceLibrary.pdb
+C:\Users\glazkov.d\Source\Repos\StudentTestSystem2\WCFServiceLibrary\bin\Debug\EntityFramework.dll
+C:\Users\glazkov.d\Source\Repos\StudentTestSystem2\WCFServiceLibrary\bin\Debug\EntityFramework.xml
+C:\Users\glazkov.d\Source\Repos\StudentTestSystem2\WCFServiceLibrary\obj\Debug\WCFServiceLibrary.dll
+C:\Users\glazkov.d\Source\Repos\StudentTestSystem2\WCFServiceLibrary\obj\Debug\WCFServiceLibrary.pdb

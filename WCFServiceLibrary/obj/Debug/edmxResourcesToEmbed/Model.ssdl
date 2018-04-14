@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TestStudentDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Answer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="QuestionId" Type="int" Nullable="false" />
+    <Property Name="Content" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="IsRight" Type="bit" Nullable="false" />
+    <Property Name="Created" Type="datetime" Nullable="false" />
+    <Property Name="Modifiyed" Type="datetime" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AttemptResult">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="QuestionId" Type="int" Nullable="false" />
+    <Property Name="AnswerTime" Type="datetime" Nullable="false" />
+    <Property Name="AttemptId" Type="int" Nullable="false" />
+    <Property Name="IsCorrect" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AttemptResultAnswer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ResultId" Type="int" Nullable="false" />
+    <Property Name="AnswerId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Question">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Content" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Image" Type="varbinary(max)" />
+    <Property Name="Created" Type="datetime" Nullable="false" />
+    <Property Name="Modifiyed" Type="datetime" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Question2Test">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TestId" Type="int" Nullable="false" />
+    <Property Name="QuestionId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Student">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Patronymic" Type="nvarchar(max)" />
+    <Property Name="GroupNumber" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TestAttempt">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TestId" Type="int" Nullable="false" />
+    <Property Name="StudentId" Type="int" Nullable="false" />
+    <Property Name="StartTime" Type="datetime" Nullable="false" />
+    <Property Name="FinishTime" Type="datetime" />
+    <Property Name="AttemptKey" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IsTimeIsUp" Type="bit" Nullable="false" />
+    <Property Name="Grade" Type="int" />
+  </EntityType>
+  <EntityType Name="TestGradeLimit">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FromPer" Type="int" Nullable="false" />
+    <Property Name="ToPer" Type="int" Nullable="false" />
+    <Property Name="Grade" Type="int" Nullable="false" />
+    <Property Name="TestId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TestInstance">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DisciplineType" Type="int" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="IsCurrent" Type="bit" Nullable="false" />
+    <Property Name="QuestionCount" Type="int" Nullable="false" />
+    <Property Name="MinuteTimeLimit" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Answer_ToQestion">
+    <End Role="Question" Type="Self.Question" Multiplicity="1" />
+    <End Role="Answer" Type="Self.Answer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Question">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Answer">
+        <PropertyRef Name="QuestionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AttemptResult_ToAttempt">
+    <End Role="TestAttempt" Type="Self.TestAttempt" Multiplicity="1" />
+    <End Role="AttemptResult" Type="Self.AttemptResult" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TestAttempt">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AttemptResult">
+        <PropertyRef Name="AttemptId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AttemptResult_ToQuestion">
+    <End Role="Question" Type="Self.Question" Multiplicity="1" />
+    <End Role="AttemptResult" Type="Self.AttemptResult" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Question">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AttemptResult">
+        <PropertyRef Name="QuestionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AttemptResultAnswer_ToAnswer">
+    <End Role="Answer" Type="Self.Answer" Multiplicity="1" />
+    <End Role="AttemptResultAnswer" Type="Self.AttemptResultAnswer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Answer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AttemptResultAnswer">
+        <PropertyRef Name="AnswerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AttemptResultAnswer_ToResult">
+    <End Role="AttemptResult" Type="Self.AttemptResult" Multiplicity="1" />
+    <End Role="AttemptResultAnswer" Type="Self.AttemptResultAnswer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AttemptResult">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AttemptResultAnswer">
+        <PropertyRef Name="ResultId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GradeLimit_ToTest">
+    <End Role="TestInstance" Type="Self.TestInstance" Multiplicity="1" />
+    <End Role="TestGradeLimit" Type="Self.TestGradeLimit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TestInstance">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TestGradeLimit">
+        <PropertyRef Name="TestId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Question2Test_ToQestion">
+    <End Role="Question" Type="Self.Question" Multiplicity="1" />
+    <End Role="Question2Test" Type="Self.Question2Test" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Question">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Question2Test">
+        <PropertyRef Name="QuestionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Question2Test_ToTest">
+    <End Role="TestInstance" Type="Self.TestInstance" Multiplicity="1" />
+    <End Role="Question2Test" Type="Self.Question2Test" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TestInstance">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Question2Test">
+        <PropertyRef Name="TestId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TestAttempt_ToStudent">
+    <End Role="Student" Type="Self.Student" Multiplicity="1" />
+    <End Role="TestAttempt" Type="Self.TestAttempt" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Student">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TestAttempt">
+        <PropertyRef Name="StudentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TestAttempt_ToTest">
+    <End Role="TestInstance" Type="Self.TestInstance" Multiplicity="1" />
+    <End Role="TestAttempt" Type="Self.TestAttempt" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TestInstance">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TestAttempt">
+        <PropertyRef Name="TestId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="TestStudentDBModelStoreContainer">
+    <EntitySet Name="Answer" EntityType="Self.Answer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AttemptResult" EntityType="Self.AttemptResult" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AttemptResultAnswer" EntityType="Self.AttemptResultAnswer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Question" EntityType="Self.Question" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Question2Test" EntityType="Self.Question2Test" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Student" EntityType="Self.Student" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TestAttempt" EntityType="Self.TestAttempt" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TestGradeLimit" EntityType="Self.TestGradeLimit" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TestInstance" EntityType="Self.TestInstance" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Answer_ToQestion" Association="Self.FK_Answer_ToQestion">
+      <End Role="Question" EntitySet="Question" />
+      <End Role="Answer" EntitySet="Answer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AttemptResult_ToAttempt" Association="Self.FK_AttemptResult_ToAttempt">
+      <End Role="TestAttempt" EntitySet="TestAttempt" />
+      <End Role="AttemptResult" EntitySet="AttemptResult" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AttemptResult_ToQuestion" Association="Self.FK_AttemptResult_ToQuestion">
+      <End Role="Question" EntitySet="Question" />
+      <End Role="AttemptResult" EntitySet="AttemptResult" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AttemptResultAnswer_ToAnswer" Association="Self.FK_AttemptResultAnswer_ToAnswer">
+      <End Role="Answer" EntitySet="Answer" />
+      <End Role="AttemptResultAnswer" EntitySet="AttemptResultAnswer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AttemptResultAnswer_ToResult" Association="Self.FK_AttemptResultAnswer_ToResult">
+      <End Role="AttemptResult" EntitySet="AttemptResult" />
+      <End Role="AttemptResultAnswer" EntitySet="AttemptResultAnswer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GradeLimit_ToTest" Association="Self.FK_GradeLimit_ToTest">
+      <End Role="TestInstance" EntitySet="TestInstance" />
+      <End Role="TestGradeLimit" EntitySet="TestGradeLimit" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Question2Test_ToQestion" Association="Self.FK_Question2Test_ToQestion">
+      <End Role="Question" EntitySet="Question" />
+      <End Role="Question2Test" EntitySet="Question2Test" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Question2Test_ToTest" Association="Self.FK_Question2Test_ToTest">
+      <End Role="TestInstance" EntitySet="TestInstance" />
+      <End Role="Question2Test" EntitySet="Question2Test" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TestAttempt_ToStudent" Association="Self.FK_TestAttempt_ToStudent">
+      <End Role="Student" EntitySet="Student" />
+      <End Role="TestAttempt" EntitySet="TestAttempt" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TestAttempt_ToTest" Association="Self.FK_TestAttempt_ToTest">
+      <End Role="TestInstance" EntitySet="TestInstance" />
+      <End Role="TestAttempt" EntitySet="TestAttempt" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -70,10 +70,10 @@
             </ListView.ItemTemplate>
         </ListView>
         
-        <Button Grid.Row="2" Grid.Column="0" Content="Редактировать" Background="LightSlateGray" BorderThickness="2"  BorderBrush="DimGray" FontSize="22" FontWeight="Medium" Foreground="White" HorizontalAlignment="Center" Margin="20"  Width="160" Height="45" Command="{Binding EditQuestionCommand}"/>
-        <Button Grid.Row="2" Grid.Column="1" Content="Удалить" Background="LightSlateGray" BorderThickness="2"  BorderBrush="DimGray" FontSize="22" FontWeight="Medium" Foreground="White" HorizontalAlignment="Center" Margin="20"  Width="160" Height="45" Command="{Binding DeleteQuestionCommand}"/>
-        <Button Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Content="Добавить новый" Background="LightSlateGray" BorderThickness="2"  BorderBrush="DimGray" FontSize="22" FontWeight="Medium" Foreground="White" HorizontalAlignment="Center" Margin="10"  Width="200" Height="45" Command="{Binding NewQuestionCommand}"/>
-        <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Content="Назад" Background="LightSlateGray" BorderThickness="2"  BorderBrush="DimGray" FontSize="22" FontWeight="Medium" Foreground="White" HorizontalAlignment="Center" Margin="10"  Width="200" Height="45" Command="{Binding OkCommand}" />
+        <Button x:Name="editBtn" Grid.Row="2" Grid.Column="0" Content="Редактировать" Background="LightSlateGray" BorderThickness="2"  BorderBrush="DimGray" FontSize="22" FontWeight="Medium" Foreground="White" HorizontalAlignment="Center" Margin="20"  Width="160" Height="45" Command="{Binding EditQuestionCommand}"/>
+        <Button x:Name="deleteBtn" Grid.Row="2" Grid.Column="1" Content="Удалить" Background="LightSlateGray" BorderThickness="2"  BorderBrush="DimGray" FontSize="22" FontWeight="Medium" Foreground="White" HorizontalAlignment="Center" Margin="20"  Width="160" Height="45" Command="{Binding DeleteQuestionCommand}"/>
+        <Button x:Name="newBtn" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Content="Добавить новый" Background="LightSlateGray" BorderThickness="2"  BorderBrush="DimGray" FontSize="22" FontWeight="Medium" Foreground="White" HorizontalAlignment="Center" Margin="10"  Width="200" Height="45" Command="{Binding NewQuestionCommand}"/>
+        <Button x:Name="backBtn" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Content="Назад" Background="LightSlateGray" BorderThickness="2"  BorderBrush="DimGray" FontSize="22" FontWeight="Medium" Foreground="White" HorizontalAlignment="Center" Margin="10"  Width="200" Height="45" Command="{Binding OkCommand}" />
         
     </Grid>
 </UserControl>

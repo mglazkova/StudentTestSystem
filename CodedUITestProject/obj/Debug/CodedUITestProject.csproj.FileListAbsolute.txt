@@ -1,0 +1,4 @@
+C:\Users\glazkov.d\Source\Repos\StudentTestSystem2\CodedUITestProject\bin\Debug\CodedUITestProject.dll
+C:\Users\glazkov.d\Source\Repos\StudentTestSystem2\CodedUITestProject\bin\Debug\CodedUITestProject.pdb
+C:\Users\glazkov.d\Source\Repos\StudentTestSystem2\CodedUITestProject\obj\Debug\CodedUITestProject.dll
+C:\Users\glazkov.d\Source\Repos\StudentTestSystem2\CodedUITestProject\obj\Debug\CodedUITestProject.pdb

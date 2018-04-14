@@ -26,9 +26,9 @@
                 <RowDefinition />
                 <RowDefinition />
              </Grid.RowDefinitions>
-            <Button Grid.Row="0" Content="Редактировать/добавить" Background="LightSlateGray" BorderThickness="2"  BorderBrush="DimGray" FontSize="22" FontWeight="Medium" Foreground="White" HorizontalAlignment="Center" Margin="50"  Width="270" Height="50" Command="{Binding QuestionEditCommand}"/>
-            <Button Grid.Row="1" Content="Задать параметры теста" Background="LightSlateGray" BorderThickness="2"  BorderBrush="DimGray" FontSize="22" FontWeight="Medium" Foreground="White" HorizontalAlignment="Center" Margin="50"  Width="270" Height="50" Command="{Binding SetTestParamCommand}"/>
-            <Button Grid.Row="2" Content="Назад" Background="LightSlateGray" BorderThickness="2"  BorderBrush="DimGray" FontSize="22" FontWeight="Medium" Foreground="White" HorizontalAlignment="Center" Margin="50"  Width="270" Height="50" Command="{Binding BackCommand}"/>
+            <Button x:Name="addEditBtn" Grid.Row="0" Content="Редактировать/добавить" Background="LightSlateGray" BorderThickness="2"  BorderBrush="DimGray" FontSize="22" FontWeight="Medium" Foreground="White" HorizontalAlignment="Center" Margin="50"  Width="270" Height="50" Command="{Binding QuestionEditCommand}"/>
+            <Button x:Name="testParamBtn" Grid.Row="1" Content="Задать параметры теста" Background="LightSlateGray" BorderThickness="2"  BorderBrush="DimGray" FontSize="22" FontWeight="Medium" Foreground="White" HorizontalAlignment="Center" Margin="50"  Width="270" Height="50" Command="{Binding SetTestParamCommand}"/>
+            <Button x:Name="backBtn" Grid.Row="2" Content="Назад" Background="LightSlateGray" BorderThickness="2"  BorderBrush="DimGray" FontSize="22" FontWeight="Medium" Foreground="White" HorizontalAlignment="Center" Margin="50"  Width="270" Height="50" Command="{Binding BackCommand}"/>
         </Grid>
     </Grid>
 </UserControl>

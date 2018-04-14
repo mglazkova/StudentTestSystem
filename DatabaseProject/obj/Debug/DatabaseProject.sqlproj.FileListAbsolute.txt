@@ -1,0 +1,9 @@
+C:\Users\glazkov.d\Source\Repos\StudentTestSystem2\DatabaseProject\bin\Debug\DatabaseProject.dacpac
+C:\Users\glazkov.d\Source\Repos\StudentTestSystem2\DatabaseProject\bin\Debug\DatabaseProject.dll
+C:\Users\glazkov.d\Source\Repos\StudentTestSystem2\DatabaseProject\bin\Debug\DatabaseProject.pdb
+C:\Users\glazkov.d\Source\Repos\StudentTestSystem2\DatabaseProject\obj\Debug\Model.xml
+C:\Users\glazkov.d\Source\Repos\StudentTestSystem2\DatabaseProject\obj\Debug\refactor.xml
+C:\Users\glazkov.d\Source\Repos\StudentTestSystem2\DatabaseProject\obj\Debug\postdeploy.sql
+C:\Users\glazkov.d\Source\Repos\StudentTestSystem2\DatabaseProject\obj\Debug\predeploy.sql
+C:\Users\glazkov.d\Source\Repos\StudentTestSystem2\DatabaseProject\obj\Debug\DatabaseProject.dll
+C:\Users\glazkov.d\Source\Repos\StudentTestSystem2\DatabaseProject\obj\Debug\DatabaseProject.pdb
