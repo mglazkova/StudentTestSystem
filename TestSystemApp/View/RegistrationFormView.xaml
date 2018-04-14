@@ -53,7 +53,7 @@
             <TextBox Margin="10" BorderThickness="2" Grid.Row="3" Grid.Column="1" BorderBrush="LightSlateGray" Foreground="DimGray" FontSize="20" FontWeight="Bold" Height="35" 
                      TextWrapping="Wrap" Width="300" Text="{Binding GroupNumber, UpdateSourceTrigger=PropertyChanged}"/>
 
-            <Button Margin="20" Command="{Binding OkCommand}" Content="Готово" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" FontSize="28"  FontWeight="Bold" Background="LightSlateGray" Foreground="White" BorderThickness="2" BorderBrush="DimGray"  Width="120" Height="45"/>
+            <Button x:Name="okLoginBtn" Margin="20" Command="{Binding OkCommand}" Content="Готово" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" FontSize="28"  FontWeight="Bold" Background="LightSlateGray" Foreground="White" BorderThickness="2" BorderBrush="DimGray"  Width="120" Height="45"/>
 
         </Grid>
 
