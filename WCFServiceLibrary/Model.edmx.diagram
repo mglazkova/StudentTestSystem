@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="855e13eb6925491ba887ae65cf3cd343" Name="Diagram1" ZoomLevel="74">
+        <EntityTypeShape EntityType="TestStudentDBModel.AttemptResult" Width="1.5" PointX="5.25" PointY="0.75" />
+        <EntityTypeShape EntityType="TestStudentDBModel.AttemptResultAnswer" Width="1.5" PointX="7.5" PointY="1" />
+        <EntityTypeShape EntityType="TestStudentDBModel.Question2Test" Width="1.5" PointX="6" PointY="4" />
+        <EntityTypeShape EntityType="TestStudentDBModel.Student" Width="1.5" PointX="0.75" PointY="9" />
+        <EntityTypeShape EntityType="TestStudentDBModel.TestAttempt" Width="1.5" PointX="3" PointY="3.5" />
+        <EntityTypeShape EntityType="TestStudentDBModel.TestInstance" Width="1.5" PointX="0.75" PointY="3.625" />
+        <AssociationConnector Association="TestStudentDBModel.FK_AttemptResult_ToAttempt" />
+        <AssociationConnector Association="TestStudentDBModel.FK_AttemptResultAnswer_ToResult" />
+        <AssociationConnector Association="TestStudentDBModel.FK_Question2Test_ToTest" />
+        <AssociationConnector Association="TestStudentDBModel.FK_TestAttempt_ToStudent" />
+        <AssociationConnector Association="TestStudentDBModel.FK_TestAttempt_ToTest" />
+        <EntityTypeShape EntityType="TestStudentDBModel.TestGradeLimit" Width="1.5" PointX="3" PointY="0.75" />
+        <AssociationConnector Association="TestStudentDBModel.FK_GradeLimit_ToTest" />
+        <EntityTypeShape EntityType="TestStudentDBModel.Answer" Width="1.5" PointX="3" PointY="13" />
+        <EntityTypeShape EntityType="TestStudentDBModel.Question" Width="1.5" PointX="0.75" PointY="0.75" />
+        <AssociationConnector Association="TestStudentDBModel.FK_Answer_ToQestion" />
+        <AssociationConnector Association="TestStudentDBModel.FK_AttemptResultAnswer_ToAnswer" />
+        <AssociationConnector Association="TestStudentDBModel.FK_AttemptResult_ToQuestion" />
+        <AssociationConnector Association="TestStudentDBModel.FK_Question2Test_ToQestion" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

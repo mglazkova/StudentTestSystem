@@ -1,0 +1,55 @@
+﻿<UserControl x:Class="TeacherApp.View.TeacherStartView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="700">
+
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush>
+                <LinearGradientBrush.GradientStops>
+                    <GradientStop Offset="0.00" Color="PowderBlue"/>
+                    <GradientStop Offset="0.4" Color="Azure" />
+                    <GradientStop Offset="1.00" Color="AliceBlue"/>
+                </LinearGradientBrush.GradientStops>
+            </LinearGradientBrush>
+        </Grid.Background>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+    
+
+        <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Text="Тестирование по дисциплине:"   HorizontalAlignment="Center" Margin="10" Foreground="LightSlateGray" FontWeight="Black" FontStyle="Italic" FontSize="35"  />
+        <TextBlock Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Text="''Сетевые информационные технологии'' "  HorizontalAlignment="Center" Margin="10" Foreground="LightSlateGray" FontWeight="Black" FontStyle="Italic" FontSize="35"  />
+            <Button Grid.Row="2" Grid.Column="0" Content="Редактировать тест" Background="LightSlateGray" BorderThickness="2"  BorderBrush="DimGray" FontSize="22" FontWeight="Medium" Foreground="White" HorizontalAlignment="Center" Margin="30"  Height="45" Command="{Binding TestEditCommand}" />
+            <Button Grid.Row="2" Grid.Column="1" Content="Результаты" Background="LightSlateGray" BorderThickness="2"  BorderBrush="DimGray" FontSize="22" FontWeight="Medium" Foreground="White" HorizontalAlignment="Center" Margin="30"   Height="45" Command="{Binding ResultViewCommand}"/>
+        </Grid>
+        <!--<TextBlock HorizontalAlignment="Center" Margin="112,142,78,281" TextWrapping="Wrap" Text=" Тестирование по дисциплине:" Foreground="LightSlateGray" FontWeight="Black" FontStyle="Italic" FontSize="31" VerticalAlignment="Center" Width="502" Height="46"/>
+        <TextBlock HorizontalAlignment="Center" Margin="-9,188,-10,233" TextWrapping="Wrap" Text=" ''Сетевые информационные технологии''" Foreground="LightSlateGray" FontWeight="Black" FontStyle="Italic" FontSize="31" VerticalAlignment="Center" Width="711" Height="48"/>
+        <Button Content="Редактировать тест" Background="LightSlateGray" BorderThickness="2"  BorderBrush="DimGray" FontSize="22" FontWeight="Medium" Foreground="White" HorizontalAlignment="Center" Margin="112,291,364,133" VerticalAlignment="Center" Width="216" Height="45" RenderTransformOrigin="0.417,0.467"/>
+        <Button Content="Результаты" Background="LightSlateGray" BorderThickness="2"  BorderBrush="DimGray" FontSize="22" FontWeight="Medium" Foreground="White" HorizontalAlignment="Center" Margin="387,291,171,133" VerticalAlignment="Center" Width="134" Height="45"/>-->
+
+
+    </Grid>
+</UserControl>

@@ -1,0 +1,70 @@
+﻿<UserControl x:Class="TestSystemApp.View.ResultFormView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:converter="clr-namespace:TestSystemApp.Common.Converter"
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="700">
+    <UserControl.Resources>
+        <converter:Bool2VisibleConverter x:Key="Bool2VisibleConverter" />
+        <converter:Bool2VisibleConverterInv x:Key="Bool2VisibleConverterInv" />        
+    </UserControl.Resources>
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush>
+                <LinearGradientBrush.GradientStops>
+                    <GradientStop Offset="0.00" Color="PowderBlue"/>
+                    <GradientStop Offset="0.4" Color="Azure" />
+                    <GradientStop Offset="1.00" Color="AliceBlue"/>
+                </LinearGradientBrush.GradientStops>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <TextBlock Margin="3" Grid.Row="0" HorizontalAlignment="Center" Text="Время закончилось!" FontSize="45"   FontStyle="Italic" FontWeight="Black" Foreground="Maroon" Visibility="{Binding TimeIsUp, Converter={StaticResource Bool2VisibleConverter}}" />
+            <TextBlock Margin="3" Grid.Row="0" HorizontalAlignment="Center" Text="Тест окончен!" FontSize="45"   FontStyle="Italic" FontWeight="Black" Foreground="Teal" Visibility="{Binding TimeIsUp, Converter={StaticResource Bool2VisibleConverterInv}}" />
+
+            <TextBlock Margin="3" Grid.Row="1" HorizontalAlignment="Center" Text="Результаты:" FontSize="35"   FontStyle="Italic" FontWeight="Black" Foreground="LightSlateGray" />
+            <TextBlock Margin="3" Grid.Row="2" Text="{Binding StudentFullName}" Foreground="LightSlateGray" FontStyle="Italic" FontSize="26" FontWeight="Bold" />
+            <TextBlock Margin="3" Grid.Row="3" Text="{Binding CountResultMessage}" Foreground="LightSlateGray" FontStyle="Italic" FontSize="26" FontWeight="Bold" />
+            <TextBlock Margin="3" Grid.Row="4" Text="{Binding PersentResultMessage}" Foreground="LightSlateGray" FontStyle="Italic" FontSize="26" FontWeight="Bold" />
+            <TextBlock Margin="3" Grid.Row="5" Text="{Binding GradeResultMessage}" Foreground="LightSlateGray" FontStyle="Italic" FontSize="26" FontWeight="Bold" />
+            <Button Margin="25" Grid.Row="6" Content="Завершить тест" BorderThickness="2" BorderBrush="DimGray" Background="LightSlateGray" FontSize="28" Foreground="White" FontWeight="Medium" HorizontalAlignment="Center" Command="{Binding FinishTestCommand}" /> 
+        </Grid>
+
+
+        <!--<TextBlock HorizontalAlignment="Center" Margin="253,84,252,372" TextWrapping="Wrap" Text=" Результат" Foreground="LightSlateGray" FontStyle="Italic" FontSize="30" FontWeight="Black" VerticalAlignment="Center" Width="195" Height="44"/>
+        <TextBlock HorizontalAlignment="Center" Margin="195,158,366,312" TextWrapping="Wrap" Text=" Фамилия"  Foreground="LightSlateGray" FontSize="22" FontWeight="Medium" VerticalAlignment="Center" Width="139" Height="30"/>
+        <TextBlock HorizontalAlignment="Center" Margin="339,158,271,312" TextWrapping="Wrap" Text=" Имя"  Foreground="LightSlateGray" FontSize="22" FontWeight="Medium" VerticalAlignment="Center" Height="30" Width="90"/>
+        <TextBlock HorizontalAlignment="Center" Margin="195,206,345,258" TextWrapping="Wrap" Text=" Правильных" Foreground="LightSlateGray" FontSize="22" FontWeight="Medium" VerticalAlignment="Center" Width="160" Height="36"/>
+        <TextBlock HorizontalAlignment="Center" Margin="355,208,310,263" TextWrapping="Wrap" Text=" Х" Foreground="LightSlateGray" FontSize="22" FontWeight="Medium" VerticalAlignment="Center" Width="35" RenderTransformOrigin="0.629,0.91"/>
+        <TextBlock HorizontalAlignment="Center" Margin="411,207,252,264" TextWrapping="Wrap" Text=" из" Foreground="LightSlateGray" FontSize="22" FontWeight="Medium" VerticalAlignment="Center" Width="37"/>
+        <TextBlock HorizontalAlignment="Center" Margin="472,207,181,264" TextWrapping="Wrap" Text=" Y" Foreground="LightSlateGray" FontSize="22" FontWeight="Medium" VerticalAlignment="Center" Width="47"/>
+        <TextBlock HorizontalAlignment="Center" Margin="195,254,461,217" TextWrapping="Wrap" Text=" 100" Foreground="LightSlateGray" FontSize="22" FontWeight="Medium" VerticalAlignment="Center" Width="44"/>
+        <TextBlock HorizontalAlignment="Center" Margin="195,302,400,168" TextWrapping="Wrap" Text=" Оценка" Foreground="LightSlateGray" FontSize="22" FontWeight="Medium" VerticalAlignment="Center" Width="105" Height="30"/>
+        <TextBlock HorizontalAlignment="Center" Margin="308,302,345,168" TextWrapping="Wrap" Text=" А" Foreground="LightSlateGray" FontSize="22" FontWeight="Medium" VerticalAlignment="Center" Width="47" Height="30"/>
+        <TextBlock HorizontalAlignment="Center" Margin="244,254,201,204" TextWrapping="Wrap" Text=" % правильных ответов" Foreground="LightSlateGray" FontSize="22" FontWeight="Medium" VerticalAlignment="Center" Width="255" Height="42"/>-->
+
+    </Grid>
+</UserControl>

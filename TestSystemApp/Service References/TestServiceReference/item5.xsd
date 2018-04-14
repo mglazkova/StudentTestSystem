@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WCFServiceLibrary.DataContract" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WCFServiceLibrary.DataContract" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/TestSystemService/?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/WCFServiceLibrary.Enum" />
+  <xs:import schemaLocation="http://localhost/TestSystemService/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WCFServiceLibrary" />
+  <xs:complexType name="StudentTestResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AllQuestionCount" type="xs:int" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WCFServiceLibrary.Enum" minOccurs="0" name="Grade" type="q1:Grade" />
+      <xs:element minOccurs="0" name="PersentResult" type="xs:double" />
+      <xs:element minOccurs="0" name="RightQuestionCount" type="xs:int" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WCFServiceLibrary" minOccurs="0" name="Student" nillable="true" type="q2:Student" />
+      <xs:element minOccurs="0" name="TimeIsUp" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StudentTestResult" nillable="true" type="tns:StudentTestResult" />
+</xs:schema>

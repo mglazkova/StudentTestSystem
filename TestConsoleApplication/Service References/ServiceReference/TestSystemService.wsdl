@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="TestSystemService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost/TestSystemService/?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost/TestSystemService/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost/TestSystemService/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WCFServiceLibrary" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ITestSystemService_GetCurrentTest_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrentTest" />
+  </wsdl:message>
+  <wsdl:message name="ITestSystemService_GetCurrentTest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrentTestResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITestSystemService_RigisterStudent_InputMessage">
+    <wsdl:part name="parameters" element="tns:RigisterStudent" />
+  </wsdl:message>
+  <wsdl:message name="ITestSystemService_RigisterStudent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RigisterStudentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITestSystemService_StartTest_InputMessage">
+    <wsdl:part name="parameters" element="tns:StartTest" />
+  </wsdl:message>
+  <wsdl:message name="ITestSystemService_StartTest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StartTestResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITestSystemService_GetQuestion4Atempt_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetQuestion4Atempt" />
+  </wsdl:message>
+  <wsdl:message name="ITestSystemService_GetQuestion4Atempt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetQuestion4AtemptResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ITestSystemService">
+    <wsdl:operation name="GetCurrentTest">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITestSystemService/GetCurrentTest" message="tns:ITestSystemService_GetCurrentTest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITestSystemService/GetCurrentTestResponse" message="tns:ITestSystemService_GetCurrentTest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RigisterStudent">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITestSystemService/RigisterStudent" message="tns:ITestSystemService_RigisterStudent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITestSystemService/RigisterStudentResponse" message="tns:ITestSystemService_RigisterStudent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StartTest">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITestSystemService/StartTest" message="tns:ITestSystemService_StartTest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITestSystemService/StartTestResponse" message="tns:ITestSystemService_StartTest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQuestion4Atempt">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITestSystemService/GetQuestion4Atempt" message="tns:ITestSystemService_GetQuestion4Atempt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITestSystemService/GetQuestion4AtemptResponse" message="tns:ITestSystemService_GetQuestion4Atempt_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ITestSystemService" type="tns:ITestSystemService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetCurrentTest">
+      <soap:operation soapAction="http://tempuri.org/ITestSystemService/GetCurrentTest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RigisterStudent">
+      <soap:operation soapAction="http://tempuri.org/ITestSystemService/RigisterStudent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StartTest">
+      <soap:operation soapAction="http://tempuri.org/ITestSystemService/StartTest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetQuestion4Atempt">
+      <soap:operation soapAction="http://tempuri.org/ITestSystemService/GetQuestion4Atempt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TestSystemService">
+    <wsdl:port name="BasicHttpBinding_ITestSystemService" binding="tns:BasicHttpBinding_ITestSystemService">
+      <soap:address location="http://localhost/TestSystemService/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

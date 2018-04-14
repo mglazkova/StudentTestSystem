@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WCFServiceLibrary.Enum" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WCFServiceLibrary.Enum" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="Grade">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Poor" />
+      <xs:enumeration value="Satisfactory" />
+      <xs:enumeration value="Good" />
+      <xs:enumeration value="Excellent" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Grade" nillable="true" type="tns:Grade" />
+</xs:schema>

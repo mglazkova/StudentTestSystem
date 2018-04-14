@@ -1,0 +1,46 @@
+﻿<UserControl  x:Class="TestSystemApp.View.StartView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="700">
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.Background>
+            <LinearGradientBrush>
+                <LinearGradientBrush.GradientStops>
+                    <GradientStop Offset="0.00" Color="PowderBlue"/>
+                    <GradientStop Offset="0.4" Color="Azure" />
+                    <GradientStop Offset="1.00" Color="AliceBlue"/>
+                </LinearGradientBrush.GradientStops>
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+              </Grid.RowDefinitions>
+        
+       
+
+            <TextBlock Grid.Row="0" Text="Тестирование по дисциплине:"   HorizontalAlignment="Center" Margin="5" Foreground="LightSlateGray" FontWeight="Black" FontStyle="Italic" FontSize="35" />
+            <TextBlock Grid.Row="1" Text="{Binding TestDescription}"  HorizontalAlignment="Center" Margin="5" Foreground="LightSlateGray" FontWeight="Black" FontStyle="Italic" FontSize="35"  />
+
+        <Button Content="OK" Command="{Binding OkCommand}" Grid.Row="2" Margin="25" Background="LightSlateGray" BorderThickness="2"  BorderBrush="DimGray" FontSize="30" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center"  Width="120" Height="45"/>
+
+        </Grid>
+        <!--<Button Content="OK" Background="LightSlateGray" BorderThickness="2"  BorderBrush="DimGray" FontSize="22" FontWeight="Black" Foreground="White" HorizontalAlignment="Center" Margin="280,236,280,73" VerticalAlignment="Center" Width="120" Height="45"/>
+        <TextBlock HorizontalAlignment="Center" Margin="112,142,78,281" TextWrapping="Wrap" Text=" Тестирование по дисциплине:" Foreground="LightSlateGray" FontWeight="Black" FontStyle="Italic" FontSize="31" VerticalAlignment="Center" Width="502" Height="46"/>
+        <TextBlock HorizontalAlignment="Center" Margin="-9,188,-10,233" TextWrapping="Wrap" Text=" ''Сетевые информационные технологии''" Foreground="LightSlateGray" FontWeight="Black" FontStyle="Italic" FontSize="31" VerticalAlignment="Center" Width="711" Height="48"/>-->
+
+
+    </Grid>
+</UserControl>

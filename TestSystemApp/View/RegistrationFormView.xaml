@@ -1,0 +1,61 @@
+﻿<UserControl x:Class="TestSystemApp.View.RegistrationFormView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="700">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.Background>
+            <LinearGradientBrush>
+                <LinearGradientBrush.GradientStops>
+                    <GradientStop Offset="0.00" Color="PowderBlue"/>
+                    <GradientStop Offset="0.4" Color="Azure" />
+                    <GradientStop Offset="1.00" Color="AliceBlue"/>
+                </LinearGradientBrush.GradientStops>
+            </LinearGradientBrush>
+        </Grid.Background>
+        
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"  />
+                <ColumnDefinition Width="*"  />
+            </Grid.ColumnDefinitions>
+
+            <TextBlock x:Name="registrTxtBlock" HorizontalAlignment="Center" Margin="10" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"  TextWrapping="Wrap" Text=" Регистрация" FontSize="35"   FontStyle="Italic" FontWeight="Black" Foreground="LightSlateGray"/>
+
+            <TextBlock  Grid.Row="1" Grid.Column="0" TextWrapping="Wrap" Text=" Фамилия: " FontSize="26" Foreground="LightSlateGray" FontWeight="Black" HorizontalAlignment="Right" VerticalAlignment="Center" />
+            <TextBox  Margin="10" BorderThickness="2" Grid.Row="1" Grid.Column="1"  BorderBrush="LightSlateGray" Foreground="DimGray" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center"
+                      Height="34" TextWrapping="Wrap" VerticalAlignment="Center" Width="300" Text="{Binding LastName, UpdateSourceTrigger=PropertyChanged}"/>
+
+            <TextBlock Grid.Row="2" Grid.Column="0"  TextWrapping="Wrap" Text=" Имя: " FontSize="26" Foreground="LightSlateGray" FontWeight="Black" HorizontalAlignment="Right" VerticalAlignment="Center" />
+            <TextBox Margin="10" BorderThickness="2"  Grid.Row="2" Grid.Column="1" BorderBrush="LightSlateGray" Foreground="DimGray" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center"
+                     Height="35" TextWrapping="Wrap" VerticalAlignment="Center" Width="300" Text="{Binding FirstName, UpdateSourceTrigger=PropertyChanged}"/>
+
+            <TextBlock Grid.Row="3" Grid.Column="0" TextWrapping="Wrap" Text=" Группа: " FontSize="26" Foreground="LightSlateGray" FontWeight="Black" HorizontalAlignment="Right" VerticalAlignment="Center"  />
+            <TextBox Margin="10" BorderThickness="2" Grid.Row="3" Grid.Column="1" BorderBrush="LightSlateGray" Foreground="DimGray" FontSize="20" FontWeight="Bold" Height="35" 
+                     TextWrapping="Wrap" Width="300" Text="{Binding GroupNumber, UpdateSourceTrigger=PropertyChanged}"/>
+
+            <Button Margin="20" Command="{Binding OkCommand}" Content="Готово" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" FontSize="28"  FontWeight="Bold" Background="LightSlateGray" Foreground="White" BorderThickness="2" BorderBrush="DimGray"  Width="120" Height="45"/>
+
+        </Grid>
+
+    </Grid>
+</UserControl>
