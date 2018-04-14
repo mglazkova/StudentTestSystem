@@ -7,3 +7,12 @@ C:\Users\glazkov.d\Source\Repos\StudentTestSystem2\DatabaseProject\obj\Debug\pos
 C:\Users\glazkov.d\Source\Repos\StudentTestSystem2\DatabaseProject\obj\Debug\predeploy.sql
 C:\Users\glazkov.d\Source\Repos\StudentTestSystem2\DatabaseProject\obj\Debug\DatabaseProject.dll
 C:\Users\glazkov.d\Source\Repos\StudentTestSystem2\DatabaseProject\obj\Debug\DatabaseProject.pdb
+D:\GITHUB\StudentTestSystem\DatabaseProject\bin\Debug\DatabaseProject.dacpac
+D:\GITHUB\StudentTestSystem\DatabaseProject\bin\Debug\DatabaseProject.dll
+D:\GITHUB\StudentTestSystem\DatabaseProject\bin\Debug\DatabaseProject.pdb
+D:\GITHUB\StudentTestSystem\DatabaseProject\obj\Debug\Model.xml
+D:\GITHUB\StudentTestSystem\DatabaseProject\obj\Debug\refactor.xml
+D:\GITHUB\StudentTestSystem\DatabaseProject\obj\Debug\postdeploy.sql
+D:\GITHUB\StudentTestSystem\DatabaseProject\obj\Debug\predeploy.sql
+D:\GITHUB\StudentTestSystem\DatabaseProject\obj\Debug\DatabaseProject.dll
+D:\GITHUB\StudentTestSystem\DatabaseProject\obj\Debug\DatabaseProject.pdb

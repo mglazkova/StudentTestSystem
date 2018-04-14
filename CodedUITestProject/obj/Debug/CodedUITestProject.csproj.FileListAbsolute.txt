@@ -2,3 +2,8 @@ C:\Users\glazkov.d\Source\Repos\StudentTestSystem2\CodedUITestProject\bin\Debug\
 C:\Users\glazkov.d\Source\Repos\StudentTestSystem2\CodedUITestProject\bin\Debug\CodedUITestProject.pdb
 C:\Users\glazkov.d\Source\Repos\StudentTestSystem2\CodedUITestProject\obj\Debug\CodedUITestProject.dll
 C:\Users\glazkov.d\Source\Repos\StudentTestSystem2\CodedUITestProject\obj\Debug\CodedUITestProject.pdb
+D:\GITHUB\StudentTestSystem\CodedUITestProject\bin\Debug\CodedUITestProject.dll
+D:\GITHUB\StudentTestSystem\CodedUITestProject\bin\Debug\CodedUITestProject.pdb
+D:\GITHUB\StudentTestSystem\CodedUITestProject\obj\Debug\CodedUITestProject.dll
+D:\GITHUB\StudentTestSystem\CodedUITestProject\obj\Debug\CodedUITestProject.pdb
+D:\GITHUB\StudentTestSystem\CodedUITestProject\obj\Debug\CodedUITestProject.csprojResolveAssemblyReference.cache

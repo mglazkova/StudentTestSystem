@@ -36,11 +36,11 @@ namespace CodedUITestProject
         public void StartTeacherRecordedMethod()
         {
             #region Variable Declarations
-            WinEdit uINameEdit = this.UIDebugWindow.UIItemWindow.UITeacherAppexeListItem.UINameEdit;
+            WinEdit uINameEdit = this.UICodedUIWindow.UIItemWindow.UITeacherAppexeListItem.UINameEdit;
             #endregion
 
             // Double-Click 'Name' text box
-            Mouse.DoubleClick(uINameEdit, new Point(39, 10));
+            Mouse.DoubleClick(uINameEdit, new Point(56, 8));
         }
         
         /// <summary>
@@ -48,12 +48,8 @@ namespace CodedUITestProject
         /// </summary>
         public void CloseTeacherAppRecordedMethod()
         {
-            #region Variable Declarations
-            WinButton uICloseButton = this.UIСетевыеинформационныWindow.UICloseButton;
-            #endregion
 
-            // Click 'Close' button
-            Mouse.Click(uICloseButton, new Point(19, 5));
+            // The last action was not recorded because access to the application was denied.
         }
         
         /// <summary>
@@ -937,6 +933,18 @@ namespace CodedUITestProject
                 return this.mUIWpfWindow;
             }
         }
+        
+        public UICodedUIWindow UICodedUIWindow
+        {
+            get
+            {
+                if ((this.mUICodedUIWindow == null))
+                {
+                    this.mUICodedUIWindow = new UICodedUIWindow();
+                }
+                return this.mUICodedUIWindow;
+            }
+        }
         #endregion
         
         #region Fields
@@ -1001,6 +1009,8 @@ namespace CodedUITestProject
         private UIСетевыеинформационныWindow1 mUIСетевыеинформационныWindow1;
         
         private UIWpfWindow mUIWpfWindow;
+        
+        private UICodedUIWindow mUICodedUIWindow;
         #endregion
     }
     
@@ -2589,6 +2599,107 @@ namespace CodedUITestProject
         private WpfEdit mUIItemEdit;
         
         private WpfCheckBox mUIItemCheckBox;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class UICodedUIWindow : WinWindow
+    {
+        
+        public UICodedUIWindow()
+        {
+            #region Search Criteria
+            this.SearchProperties[WinWindow.PropertyNames.Name] = "CodedUI";
+            this.SearchProperties[WinWindow.PropertyNames.ClassName] = "CabinetWClass";
+            this.WindowTitles.Add("CodedUI");
+            #endregion
+        }
+        
+        #region Properties
+        public UIItemWindow2 UIItemWindow
+        {
+            get
+            {
+                if ((this.mUIItemWindow == null))
+                {
+                    this.mUIItemWindow = new UIItemWindow2(this);
+                }
+                return this.mUIItemWindow;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private UIItemWindow2 mUIItemWindow;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class UIItemWindow2 : WinWindow
+    {
+        
+        public UIItemWindow2(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[WinWindow.PropertyNames.AccessibleName] = "Items View";
+            this.SearchProperties[WinWindow.PropertyNames.ClassName] = "DirectUIHWND";
+            this.WindowTitles.Add("CodedUI");
+            #endregion
+        }
+        
+        #region Properties
+        public UITeacherAppexeListItem1 UITeacherAppexeListItem
+        {
+            get
+            {
+                if ((this.mUITeacherAppexeListItem == null))
+                {
+                    this.mUITeacherAppexeListItem = new UITeacherAppexeListItem1(this);
+                }
+                return this.mUITeacherAppexeListItem;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private UITeacherAppexeListItem1 mUITeacherAppexeListItem;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class UITeacherAppexeListItem1 : WinListItem
+    {
+        
+        public UITeacherAppexeListItem1(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[WinListItem.PropertyNames.Name] = "TeacherApp.exe";
+            this.WindowTitles.Add("CodedUI");
+            #endregion
+        }
+        
+        #region Properties
+        public WinEdit UINameEdit
+        {
+            get
+            {
+                if ((this.mUINameEdit == null))
+                {
+                    this.mUINameEdit = new WinEdit(this);
+                    #region Search Criteria
+                    this.mUINameEdit.SearchProperties[WinEdit.PropertyNames.Name] = "Name";
+                    this.mUINameEdit.WindowTitles.Add("CodedUI");
+                    #endregion
+                }
+                return this.mUINameEdit;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private WinEdit mUINameEdit;
         #endregion
     }
 }

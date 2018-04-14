@@ -10,17 +10,18 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestSystemApp", "TestSystem
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCFServiceLibrary", "WCFServiceLibrary\WCFServiceLibrary.csproj", "{7CBF05EB-40BA-4E2E-B77B-8A2E7A034955}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{93C450BD-FB6B-43A7-A238-36DE4B6917C7}"
-	ProjectSection(SolutionItems) = preProject
-		..\..\..\..\admin\Desktop\Диплом\блок схемы\Блок Схема.vsdx = ..\..\..\..\admin\Desktop\Диплом\блок схемы\Блок Схема.vsdx
-		..\..\..\..\admin\Desktop\Диплом\Сonformity table.docx = ..\..\..\..\admin\Desktop\Диплом\Сonformity table.docx
-	EndProjectSection
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeacherApp", "TeacherApp\TeacherApp.csproj", "{4F811B57-83DE-4473-897C-EC90F98EA59F}"
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "DatabaseProject", "DatabaseProject\DatabaseProject.sqlproj", "{10561B36-BB00-44AC-8344-0037CD950F3D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodedUITestProject", "CodedUITestProject\CodedUITestProject.csproj", "{BE46016A-DDC6-4E4D-9F62-0C2F766AB3E7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{670F8D95-5D07-473E-9A5D-D024032BEAE1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A66241E9-CA70-4105-95A7-B2ED62E13C2B}"
+	ProjectSection(SolutionItems) = preProject
+		TestCase.docx = TestCase.docx
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

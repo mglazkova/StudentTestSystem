@@ -5,3 +5,10 @@ C:\Users\glazkov.d\Source\Repos\StudentTestSystem2\WCFServiceLibrary\bin\Debug\E
 C:\Users\glazkov.d\Source\Repos\StudentTestSystem2\WCFServiceLibrary\bin\Debug\EntityFramework.xml
 C:\Users\glazkov.d\Source\Repos\StudentTestSystem2\WCFServiceLibrary\obj\Debug\WCFServiceLibrary.dll
 C:\Users\glazkov.d\Source\Repos\StudentTestSystem2\WCFServiceLibrary\obj\Debug\WCFServiceLibrary.pdb
+D:\GITHUB\StudentTestSystem\WCFServiceLibrary\bin\Debug\WCFServiceLibrary.dll.config
+D:\GITHUB\StudentTestSystem\WCFServiceLibrary\bin\Debug\WCFServiceLibrary.dll
+D:\GITHUB\StudentTestSystem\WCFServiceLibrary\bin\Debug\WCFServiceLibrary.pdb
+D:\GITHUB\StudentTestSystem\WCFServiceLibrary\bin\Debug\EntityFramework.dll
+D:\GITHUB\StudentTestSystem\WCFServiceLibrary\bin\Debug\EntityFramework.xml
+D:\GITHUB\StudentTestSystem\WCFServiceLibrary\obj\Debug\WCFServiceLibrary.dll
+D:\GITHUB\StudentTestSystem\WCFServiceLibrary\obj\Debug\WCFServiceLibrary.pdb
