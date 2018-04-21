@@ -150,6 +150,7 @@ namespace TeacherApp.ViewModel
                 if (resultTry)
                 {
                     QuestionCollection.Remove(SelectedQuestion);
+                    QuestionCollection = new ObservableCollection<Question>(QuestionCollection);
                 }
             }
         }
