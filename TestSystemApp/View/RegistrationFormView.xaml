@@ -43,17 +43,19 @@
 
             <TextBlock  Grid.Row="1" Grid.Column="0" TextWrapping="Wrap" Text=" Фамилия: " FontSize="26" Foreground="LightSlateGray" FontWeight="Black" HorizontalAlignment="Right" VerticalAlignment="Center" />
             <TextBox  Margin="10" BorderThickness="2" Grid.Row="1" Grid.Column="1"  BorderBrush="LightSlateGray" Foreground="DimGray" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center"
-                      Height="34" TextWrapping="Wrap" VerticalAlignment="Center" Width="300" Text="{Binding LastName, UpdateSourceTrigger=PropertyChanged}"/>
+                      Height="34" TextWrapping="Wrap" VerticalAlignment="Center" Width="300" Text="{Binding LastName, UpdateSourceTrigger=PropertyChanged}"
+                      PreviewTextInput="UIElement_OnPreviewTextInput"/>
 
             <TextBlock Grid.Row="2" Grid.Column="0"  TextWrapping="Wrap" Text=" Имя: " FontSize="26" Foreground="LightSlateGray" FontWeight="Black" HorizontalAlignment="Right" VerticalAlignment="Center" />
             <TextBox Margin="10" BorderThickness="2"  Grid.Row="2" Grid.Column="1" BorderBrush="LightSlateGray" Foreground="DimGray" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center"
                      Height="35" TextWrapping="Wrap" VerticalAlignment="Center" Width="300" Text="{Binding FirstName, UpdateSourceTrigger=PropertyChanged}"
-                     PreviewTextInput="UIElement_OnPreviewTextInput"/>
+                     PreviewTextInput="UIElement_OnPreviewTextInput"
+                     />
 
             <TextBlock Grid.Row="3" Grid.Column="0" TextWrapping="Wrap" Text=" Группа: " FontSize="26" Foreground="LightSlateGray" FontWeight="Black" HorizontalAlignment="Right" VerticalAlignment="Center"  />
             <TextBox Margin="10" BorderThickness="2" Grid.Row="3" Grid.Column="1" BorderBrush="LightSlateGray" Foreground="DimGray" FontSize="20" FontWeight="Bold" Height="35" 
                      TextWrapping="Wrap" Width="300" Text="{Binding GroupNumber, UpdateSourceTrigger=PropertyChanged}"
-                     PreviewTextInput="UIElement_OnPreviewTextInput"/>
+                    />
 
             <Button x:Name="okLoginBtn" Margin="20" Command="{Binding OkCommand}" Content="Готово" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" FontSize="28"  FontWeight="Bold" Background="LightSlateGray" Foreground="White" BorderThickness="2" BorderBrush="DimGray"  Width="120" Height="45"/>
 
