@@ -9,6 +9,7 @@ using System.Windows.Input;
 using TeacherApp.Common;
 using TeacherApp.DAL;
 using TeacherApp.Helper;
+using TeacherApp.View;
 using WCFServiceLibrary;
 using WCFServiceLibrary.Enum;
 
@@ -149,6 +150,34 @@ namespace TeacherApp.ViewModel
         private bool CanExecuteStudentSearchCommand(Object parameter)
         {
             return !String.IsNullOrEmpty(SearchString);
+        }
+
+        #endregion
+
+        #region BackCommand
+
+        private RelayCommand _backCommand;
+        public ICommand BackCommand
+        {
+            get
+            {
+                return _backCommand ?? (_backCommand =
+                    new RelayCommand(ExecuteBackCommand, CanExecuteBackCommand));
+            }
+        }
+
+        private void ExecuteBackCommand(Object parameter)
+        {
+            var teacherStartView = new TeacherStartView();
+            var vm = new TeacherStartViewModel();
+            vm.LoadData();
+            teacherStartView.DataContext = vm;
+            NavigationHelper.NavigateTo(teacherStartView);
+        }
+
+        private bool CanExecuteBackCommand(Object parameter)
+        {
+            return true;
         }
 
         #endregion 
