@@ -79,7 +79,7 @@ namespace CodedUITestProject
         [TestMethod]
         public void TeacherAppUICheck()
         {
-           // UIMap.TestDisciplineNameCheck();
+            UIMap.TestDisciplineNameCheck();
             UIMap.EditTestButtonExistMethod();
             UIMap.ResultButtonAssertMethod();
             UIMap.AboutAssertMethod();
