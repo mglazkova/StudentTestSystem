@@ -32,7 +32,7 @@
                     <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
 
-                <TextBox Grid.Column="0" Text="{Binding SearchString}" Margin="5" MinWidth="200" MaxWidth="500"/>
+                <TextBox Grid.Column="0" Text="{Binding SearchString, UpdateSourceTrigger=PropertyChanged}" Margin="5" MinWidth="200" MaxWidth="500"/>
 
                 <Button x:Name="searchBtn" Grid.Column="1" Command="{Binding StudentSearchCommand}" Content="Поиск" Background="LightSlateGray" BorderThickness="2"  BorderBrush="DimGray" FontSize="16" FontWeight="Medium" Foreground="White" VerticalAlignment="Center" />
             </Grid>

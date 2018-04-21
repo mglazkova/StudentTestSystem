@@ -148,7 +148,7 @@ namespace TeacherApp.ViewModel
 
         private bool CanExecuteStudentSearchCommand(Object parameter)
         {
-            return true;
+            return !String.IsNullOrEmpty(SearchString);
         }
 
         #endregion 
