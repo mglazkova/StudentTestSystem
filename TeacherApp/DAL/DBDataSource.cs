@@ -21,9 +21,11 @@ namespace TeacherApp.DAL
                 {
                     var data = (from t in ctx.TestAttempts
                         join s in ctx.Students on t.StudentId equals s.Id
+                        join ti in ctx.TestInstances on t.TestId equals ti.Id
                     select new
                     {
-                        Attept = t,s.LastName,s.Name,s.GroupNumber
+                        Attept = t,s.LastName,s.Name,s.GroupNumber,
+                        AllAttemptQuestionCount=ti.QuestionCount
                     }).ToArray();
 
 
@@ -49,11 +51,13 @@ namespace TeacherApp.DAL
                             at.Status = diffMin > timeLimitMin ? TestAttemptStatus.Aborted : TestAttemptStatus.InProgress;
                         }
 
+                        var allAttemptQuestionCount = d.AllAttemptQuestionCount;
 
                         at.AllQuestionCount = ctx.AttemptResults.Count(r => r.AttemptId == at.Id);
                         at.RightQuestionCount = ctx.AttemptResults.Count(r => r.AttemptId == at.Id && r.IsCorrect);
 
-                        at.PersentResult = (at.AllQuestionCount != 0) ? ((double)at.RightQuestionCount / (double)at.AllQuestionCount) * 100 : 0;
+                       // at.PersentResult = (at.AllQuestionCount != 0) ? ((double)at.RightQuestionCount / (double)at.AllQuestionCount) * 100 : 0;
+                        at.PersentResult = (at.AllQuestionCount != 0) ? ((double)at.RightQuestionCount / (double)allAttemptQuestionCount) * 100 : 0;
 
                         
                         attempts.Add(at);
