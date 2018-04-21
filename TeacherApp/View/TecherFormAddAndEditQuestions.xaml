@@ -42,7 +42,7 @@
                    FontStyle="Italic" FontWeight="ExtraBlack" Margin="3" />
         <ListBox Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Margin="3" 
                  ItemsSource="{Binding AnswerCollection}" SelectedItem="{Binding SelectedAnswer}"
-                 HorizontalContentAlignment="Stretch" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                 HorizontalContentAlignment="Stretch" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Grid>
