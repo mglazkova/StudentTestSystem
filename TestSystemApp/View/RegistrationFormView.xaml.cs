@@ -24,5 +24,12 @@ namespace TestSystemApp.View
         {
             InitializeComponent();
         }
+
+
+        private void UIElement_OnPreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            if (Char.IsDigit(e.Text, 0)) e.Handled = true;
+        }
+        
     }
 }

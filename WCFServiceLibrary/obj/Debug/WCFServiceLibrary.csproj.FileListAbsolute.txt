@@ -12,6 +12,7 @@ D:\GITHUB\StudentTestSystem\WCFServiceLibrary\bin\Debug\EntityFramework.dll
 D:\GITHUB\StudentTestSystem\WCFServiceLibrary\bin\Debug\EntityFramework.xml
 D:\GITHUB\StudentTestSystem\WCFServiceLibrary\obj\Debug\WCFServiceLibrary.dll
 D:\GITHUB\StudentTestSystem\WCFServiceLibrary\obj\Debug\WCFServiceLibrary.pdb
+D:\GITHUB\StudentTestSystem\WCFServiceLibrary\obj\Debug\WCFServiceLibrary.csprojResolveAssemblyReference.cache
 D:\GITHUB\StudentTestSystemV2\StudentTestSystem\WCFServiceLibrary\bin\Debug\WCFServiceLibrary.dll.config
 D:\GITHUB\StudentTestSystemV2\StudentTestSystem\WCFServiceLibrary\bin\Debug\WCFServiceLibrary.dll
 D:\GITHUB\StudentTestSystemV2\StudentTestSystem\WCFServiceLibrary\bin\Debug\WCFServiceLibrary.pdb
