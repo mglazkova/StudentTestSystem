@@ -125,6 +125,11 @@ namespace TeacherApp.ViewModel
                 MessageBox.Show("Отметьте хотя бы один вариант верным", "Нет правильного ответа",
                     MessageBoxButton.OK, MessageBoxImage.Stop);
             }
+            else if(string.IsNullOrEmpty(Question.Content))
+            {
+                MessageBox.Show("Вы не можете оставить поле вопроса пустым", "Отсутствует текст вопроса",
+                   MessageBoxButton.OK, MessageBoxImage.Stop);
+            }
             else
             {
                 Window.DialogResult = true;
