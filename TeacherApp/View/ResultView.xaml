@@ -74,9 +74,9 @@
                         <TextBlock Grid.Row="0" Grid.Column="0" Text="{Binding StudentName}" Margin="5" FontWeight="Bold" />
 
                         <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal" Margin="5">
-                            <TextBlock Text="{Binding StartTime, StringFormat=u}" />
+                            <TextBlock Text="{Binding StartTime, StringFormat=G}" />
                             <TextBlock Text="  -  " />
-                            <TextBlock Text="{Binding FinishTime, StringFormat=u}" />
+                            <TextBlock Text="{Binding FinishTime, StringFormat=G}" />
                         </StackPanel>
 
                         <TextBlock Grid.Row="0" Grid.RowSpan="2" Grid.Column="2" Text="{Binding Status, Converter={StaticResource statusConv}}" Margin="5" VerticalAlignment="Center" />
