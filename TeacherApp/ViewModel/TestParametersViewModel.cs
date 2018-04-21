@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Input;
 using TeacherApp.Common;
 using TeacherApp.DAL;
@@ -229,64 +230,73 @@ namespace TeacherApp.ViewModel
 
         private void ExecuteSaveCommand(Object parameter)
         {
-            //КОД корректировки лимитов
-            foreach (Grade grade in Enum.GetValues(typeof (Grade)))
+            if (GradeLimitValidation())
             {
-                var limit = _limits.FirstOrDefault(l => l.Grade == (int)grade);
-                if (limit == null)
+                //КОД корректировки лимитов
+                foreach (Grade grade in Enum.GetValues(typeof(Grade)))
                 {
-                    limit=new TestGradeLimit() { TestId = NavigationHelper.CurrrentTest.Id };
-                    limit.Grade = (int)grade;
-                    _limits.Add(limit);
+                    var limit = _limits.FirstOrDefault(l => l.Grade == (int)grade);
+                    if (limit == null)
+                    {
+                        limit = new TestGradeLimit() { TestId = NavigationHelper.CurrrentTest.Id };
+                        limit.Grade = (int)grade;
+                        _limits.Add(limit);
+                    }
+
+                    switch (grade)
+                    {
+                        case Grade.Poor:
+                            limit.ToPer = PoorMaxValue;
+                            break;
+                        case Grade.Satisfactory:
+                            limit.FromPer = SatisfyMinValue;
+                            limit.ToPer = SatisfyMaxValue;
+                            break;
+                        case Grade.Good:
+                            limit.FromPer = GoodMinValue;
+                            limit.ToPer = GoodMaxValue;
+                            break;
+                        case Grade.Excellent:
+                            limit.FromPer = ExcellentMinValue;
+                            limit.ToPer = ExcellentMaxValue;
+                            break;
+                    }
                 }
-                          
-                switch (grade)
+
+                NavigationHelper.CurrrentTest.MinuteTimeLimit = MinuteLimitCount;
+                NavigationHelper.CurrrentTest.QuestionCount = QuestionCount;
+
+                //Работа с БД
+                NavigationHelper.IsBusy = true;
+                BackgroundProcessFactory.RunAsync(null, (o, e) =>
                 {
-                    case Grade.Poor:
-                        limit.ToPer = PoorMaxValue;
-                        break;
-                    case Grade.Satisfactory:
-                        limit.FromPer = SatisfyMinValue;
-                        limit.ToPer = SatisfyMaxValue;
-                        break;
-                    case Grade.Good:
-                        limit.FromPer = GoodMinValue;
-                        limit.ToPer = GoodMaxValue;
-                        break;
-                    case Grade.Excellent:
-                        limit.FromPer = ExcellentMinValue;
-                        limit.ToPer = ExcellentMaxValue;
-                        break;
-                }
+                    DBDataSource.SaveTestParam(NavigationHelper.CurrrentTest, _limits.ToArray());
+                },
+                (o, e) =>
+                {
+                    NavigationHelper.IsBusy = false;
+                    if (e.Error != null)
+                    {
+                        return;
+                    }
+                    else
+                    {
+                        var functionsView = new TeacherFunctionsView();
+
+                        var vm = new TeacherFunctionsViewModel();
+                        vm.LoadData();
+                        functionsView.DataContext = vm;
+
+                        NavigationHelper.NavigateTo(functionsView);
+                    }
+                });
             }
-
-            NavigationHelper.CurrrentTest.MinuteTimeLimit = MinuteLimitCount;
-            NavigationHelper.CurrrentTest.QuestionCount = QuestionCount;
-
-            //Работа с БД
-            NavigationHelper.IsBusy = true;
-            BackgroundProcessFactory.RunAsync(null, (o, e) =>
+            else
             {
-                DBDataSource.SaveTestParam(NavigationHelper.CurrrentTest, _limits.ToArray());
-            },
-            (o, e) =>
-            {
-                NavigationHelper.IsBusy = false;
-                if (e.Error != null)
-                {
-                    return;
-                }
-                else
-                {
-                    var functionsView = new TeacherFunctionsView();
-
-                    var vm = new TeacherFunctionsViewModel();
-                    vm.LoadData();
-                    functionsView.DataContext = vm;
-
-                    NavigationHelper.NavigateTo(functionsView);
-                }
-            });
+                MessageBox.Show("Не верно указаны параметры", "Не верно указаны параметры",
+                    MessageBoxButton.OK, MessageBoxImage.Stop);
+            }
+          
         }
 
         private bool CanExecuteSaveCommand(Object parameter)
@@ -294,6 +304,21 @@ namespace TeacherApp.ViewModel
             return true;
         }
 
-        #endregion 
+        #endregion
+
+        private bool GradeLimitValidation()
+        {
+            var result = true;
+            result = MinuteLimitCount > 0 && 
+                QuestionCount > 0 &&
+                PoorMaxValue < SatisfyMinValue &&
+           SatisfyMinValue < SatisfyMaxValue && 
+           SatisfyMaxValue<GoodMinValue &&
+           GoodMinValue < GoodMaxValue &&
+           GoodMaxValue < ExcellentMinValue &&
+           ExcellentMinValue < ExcellentMaxValue;
+
+            return result;
+        }
     }
 }
