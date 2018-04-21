@@ -306,6 +306,34 @@ namespace TeacherApp.ViewModel
 
         #endregion
 
+        #region BackCommand
+
+        private RelayCommand _backCommand;
+        public ICommand BackCommand
+        {
+            get
+            {
+                return _backCommand ?? (_backCommand =
+                    new RelayCommand(ExecuteBackCommand, CanExecuteBackCommand));
+            }
+        }
+
+        private void ExecuteBackCommand(Object parameter)
+        {
+            var teacherFuncView = new TeacherFunctionsView();
+            var vm = new TeacherFunctionsViewModel();
+            vm.LoadData();
+            teacherFuncView.DataContext = vm;
+            NavigationHelper.NavigateTo(teacherFuncView);
+        }
+
+        private bool CanExecuteBackCommand(Object parameter)
+        {
+            return true;
+        }
+
+        #endregion 
+
         private bool GradeLimitValidation()
         {
             var result = true;
