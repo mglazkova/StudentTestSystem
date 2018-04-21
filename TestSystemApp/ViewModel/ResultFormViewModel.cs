@@ -110,7 +110,7 @@ namespace TestSystemApp.ViewModel
 		private string _persentResultMessage;
         public string PersentResultMessage
         {
-            get { return string.Format(PersentResultFormat, (AllQuestionCount != 0) ? ((double)RightAnswerCount / (double)AllQuestionCount)*100 : 0); 
+            get { return string.Format(PersentResultFormat, (AllQuestionCount != 0) ? Math.Round(((double)RightAnswerCount / (double)AllQuestionCount) * 100,2)  : 0); 
             }
             set
             {
