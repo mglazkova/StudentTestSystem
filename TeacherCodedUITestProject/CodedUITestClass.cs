@@ -110,6 +110,32 @@ namespace TeacherCodedUITestProject
             Playback.Wait(1000);
         }
 
+        //Testcase 2.2
+        [TestMethod]
+        public void AddNewQuestionViewCheck()
+        {
+            //Открываем форму всех функции редактирования теста
+            this.UIMap.TestEditViewOpenRecorded();
+
+            //Открываем функцию добавления\редактирования вопроса
+            this.UIMap.QuestionListOpenRecorded();
+
+            //Открывем форму добавление вопроса
+            this.UIMap.QuestionAddNewViewRecorded();
+            //Проверка состояния кнопки "Добавить"
+            this.UIMap.AddQuestionView_AddBtnAssert();
+            //Проверка состояния кнопки "Удалить"
+            this.UIMap.AddQuestionView_DeleteBtnAssert();
+            //Проверка состояния кнопки "Готово"
+            this.UIMap.AddQuestionView_OkBtnAssert();
+            //Проверка состояния кнопки "Назад"
+            this.UIMap.AddQuestionView_CancelBtnAssert();
+
+            Playback.Wait(1000);
+            //Закрытие формы
+            this.UIMap.AddQuestionView_CancelRecorded();
+        }
+
         #endregion Тестовые сценарии
 
         /// <summary>

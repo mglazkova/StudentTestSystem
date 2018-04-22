@@ -296,6 +296,96 @@ namespace TeacherCodedUITestProject
             Assert.AreEqual(this.QuestionListSelected_QuestionDeleteBtnAssertExpectedValues.UIУдалитьButtonEnabled, uIУдалитьButton.Enabled, "Кнопка \"Удалить\" недоступна при выбранном вопросе");
         }
         
+        /// <summary>
+        /// QuestionAddNewViewRecorded
+        /// </summary>
+        public void QuestionAddNewViewRecorded()
+        {
+            #region Variable Declarations
+            WpfButton uIДобавитьновыйButton = this.UIСетевыеинформационныWindow.UIItemCustom.UIItemCustom12.UIДобавитьновыйButton;
+            #endregion
+
+            // Click 'Добавить новый' button
+            Mouse.Click(uIДобавитьновыйButton, new Point(119, 25));
+        }
+        
+        /// <summary>
+        /// AddQuestionView_AddBtnAssert - Use 'AddQuestionView_AddBtnAssertExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void AddQuestionView_AddBtnAssert()
+        {
+            #region Variable Declarations
+            WpfButton uIДобавитьButton = this.UIWpfWindow.UIДобавитьButton;
+            #endregion
+
+            // Verify that the 'Exists' property of 'Добавить' button equals 'True'
+            Assert.AreEqual(this.AddQuestionView_AddBtnAssertExpectedValues.UIДобавитьButtonExists, uIДобавитьButton.Exists, "Кнопка \"Добавить\" в форме добавления вопроса отсутствует");
+
+            // Verify that the 'Enabled' property of 'Добавить' button equals 'True'
+            Assert.AreEqual(this.AddQuestionView_AddBtnAssertExpectedValues.UIДобавитьButtonEnabled, uIДобавитьButton.Enabled, "Кнопка \"Добавить\" в форме добавления вопроса неактивна");
+        }
+        
+        /// <summary>
+        /// AddQuestionView_DeleteBtnAssert - Use 'AddQuestionView_DeleteBtnAssertExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void AddQuestionView_DeleteBtnAssert()
+        {
+            #region Variable Declarations
+            WpfButton uIУдалитьButton = this.UIWpfWindow.UIУдалитьButton;
+            #endregion
+
+            // Verify that the 'Exists' property of 'Удалить' button equals 'True'
+            Assert.AreEqual(this.AddQuestionView_DeleteBtnAssertExpectedValues.UIУдалитьButtonExists, uIУдалитьButton.Exists, "Кнопка \"Удалить\" в форме добавления вопроса отсутствует");
+
+            // Verify that the 'Enabled' property of 'Удалить' button equals 'False'
+            Assert.AreEqual(this.AddQuestionView_DeleteBtnAssertExpectedValues.UIУдалитьButtonEnabled, uIУдалитьButton.Enabled, "Кнопка \"Удалить\" в форме добавления вопроса активна по умолчанию");
+        }
+        
+        /// <summary>
+        /// AddQuestionView_OkBtnAssert - Use 'AddQuestionView_OkBtnAssertExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void AddQuestionView_OkBtnAssert()
+        {
+            #region Variable Declarations
+            WpfButton uIГотовоButton = this.UIWpfWindow.UIГотовоButton;
+            #endregion
+
+            // Verify that the 'Exists' property of 'Готово' button equals 'True'
+            Assert.AreEqual(this.AddQuestionView_OkBtnAssertExpectedValues.UIГотовоButtonExists, uIГотовоButton.Exists, "Кнопка \"Готово\" в форме добавления вопроса отсутствует");
+
+            // Verify that the 'Enabled' property of 'Готово' button equals 'True'
+            Assert.AreEqual(this.AddQuestionView_OkBtnAssertExpectedValues.UIГотовоButtonEnabled, uIГотовоButton.Enabled, "Кнопка \"Готово\" в форме добавления вопроса доступна по умолчанию");
+        }
+        
+        /// <summary>
+        /// AddQuestionView_CancelBtnAssert - Use 'AddQuestionView_CancelBtnAssertExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void AddQuestionView_CancelBtnAssert()
+        {
+            #region Variable Declarations
+            WpfButton uIОтменаButton = this.UIWpfWindow.UIОтменаButton;
+            #endregion
+
+            // Verify that the 'Exists' property of 'Отмена' button equals 'True'
+            Assert.AreEqual(this.AddQuestionView_CancelBtnAssertExpectedValues.UIОтменаButtonExists, uIОтменаButton.Exists, "Кнопка \"Отмена\" на форме добавления вопроса отсутствует");
+
+            // Verify that the 'Enabled' property of 'Отмена' button equals 'True'
+            Assert.AreEqual(this.AddQuestionView_CancelBtnAssertExpectedValues.UIОтменаButtonEnabled, uIОтменаButton.Enabled, "Кнопка \"Отмена\" на форме добавления вопроса неактивна");
+        }
+        
+        /// <summary>
+        /// AddQuestionView_CancelRecorded
+        /// </summary>
+        public void AddQuestionView_CancelRecorded()
+        {
+            #region Variable Declarations
+            WpfButton uIОтменаButton = this.UIWpfWindow.UIОтменаButton;
+            #endregion
+
+            // Click 'Отмена' button
+            Mouse.Click(uIОтменаButton, new Point(20, 19));
+        }
+        
         #region Properties
         public virtual TestNameAssertExpectedValues TestNameAssertExpectedValues
         {
@@ -477,6 +567,54 @@ namespace TeacherCodedUITestProject
             }
         }
         
+        public virtual AddQuestionView_AddBtnAssertExpectedValues AddQuestionView_AddBtnAssertExpectedValues
+        {
+            get
+            {
+                if ((this.mAddQuestionView_AddBtnAssertExpectedValues == null))
+                {
+                    this.mAddQuestionView_AddBtnAssertExpectedValues = new AddQuestionView_AddBtnAssertExpectedValues();
+                }
+                return this.mAddQuestionView_AddBtnAssertExpectedValues;
+            }
+        }
+        
+        public virtual AddQuestionView_DeleteBtnAssertExpectedValues AddQuestionView_DeleteBtnAssertExpectedValues
+        {
+            get
+            {
+                if ((this.mAddQuestionView_DeleteBtnAssertExpectedValues == null))
+                {
+                    this.mAddQuestionView_DeleteBtnAssertExpectedValues = new AddQuestionView_DeleteBtnAssertExpectedValues();
+                }
+                return this.mAddQuestionView_DeleteBtnAssertExpectedValues;
+            }
+        }
+        
+        public virtual AddQuestionView_OkBtnAssertExpectedValues AddQuestionView_OkBtnAssertExpectedValues
+        {
+            get
+            {
+                if ((this.mAddQuestionView_OkBtnAssertExpectedValues == null))
+                {
+                    this.mAddQuestionView_OkBtnAssertExpectedValues = new AddQuestionView_OkBtnAssertExpectedValues();
+                }
+                return this.mAddQuestionView_OkBtnAssertExpectedValues;
+            }
+        }
+        
+        public virtual AddQuestionView_CancelBtnAssertExpectedValues AddQuestionView_CancelBtnAssertExpectedValues
+        {
+            get
+            {
+                if ((this.mAddQuestionView_CancelBtnAssertExpectedValues == null))
+                {
+                    this.mAddQuestionView_CancelBtnAssertExpectedValues = new AddQuestionView_CancelBtnAssertExpectedValues();
+                }
+                return this.mAddQuestionView_CancelBtnAssertExpectedValues;
+            }
+        }
+        
         public UIСетевыеинформационныWindow UIСетевыеинформационныWindow
         {
             get
@@ -486,6 +624,18 @@ namespace TeacherCodedUITestProject
                     this.mUIСетевыеинформационныWindow = new UIСетевыеинформационныWindow();
                 }
                 return this.mUIСетевыеинформационныWindow;
+            }
+        }
+        
+        public UIWpfWindow UIWpfWindow
+        {
+            get
+            {
+                if ((this.mUIWpfWindow == null))
+                {
+                    this.mUIWpfWindow = new UIWpfWindow();
+                }
+                return this.mUIWpfWindow;
             }
         }
         #endregion
@@ -521,7 +671,17 @@ namespace TeacherCodedUITestProject
         
         private QuestionListSelected_QuestionDeleteBtnAssertExpectedValues mQuestionListSelected_QuestionDeleteBtnAssertExpectedValues;
         
+        private AddQuestionView_AddBtnAssertExpectedValues mAddQuestionView_AddBtnAssertExpectedValues;
+        
+        private AddQuestionView_DeleteBtnAssertExpectedValues mAddQuestionView_DeleteBtnAssertExpectedValues;
+        
+        private AddQuestionView_OkBtnAssertExpectedValues mAddQuestionView_OkBtnAssertExpectedValues;
+        
+        private AddQuestionView_CancelBtnAssertExpectedValues mAddQuestionView_CancelBtnAssertExpectedValues;
+        
         private UIСетевыеинформационныWindow mUIСетевыеинформационныWindow;
+        
+        private UIWpfWindow mUIWpfWindow;
         #endregion
     }
     
@@ -802,6 +962,86 @@ namespace TeacherCodedUITestProject
         /// Verify that the 'Enabled' property of 'Удалить' button equals 'True'
         /// </summary>
         public bool UIУдалитьButtonEnabled = true;
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'AddQuestionView_AddBtnAssert'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class AddQuestionView_AddBtnAssertExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'Exists' property of 'Добавить' button equals 'True'
+        /// </summary>
+        public bool UIДобавитьButtonExists = true;
+        
+        /// <summary>
+        /// Verify that the 'Enabled' property of 'Добавить' button equals 'True'
+        /// </summary>
+        public bool UIДобавитьButtonEnabled = true;
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'AddQuestionView_DeleteBtnAssert'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class AddQuestionView_DeleteBtnAssertExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'Exists' property of 'Удалить' button equals 'True'
+        /// </summary>
+        public bool UIУдалитьButtonExists = true;
+        
+        /// <summary>
+        /// Verify that the 'Enabled' property of 'Удалить' button equals 'False'
+        /// </summary>
+        public bool UIУдалитьButtonEnabled = false;
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'AddQuestionView_OkBtnAssert'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class AddQuestionView_OkBtnAssertExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'Exists' property of 'Готово' button equals 'True'
+        /// </summary>
+        public bool UIГотовоButtonExists = true;
+        
+        /// <summary>
+        /// Verify that the 'Enabled' property of 'Готово' button equals 'True'
+        /// </summary>
+        public bool UIГотовоButtonEnabled = true;
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'AddQuestionView_CancelBtnAssert'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class AddQuestionView_CancelBtnAssertExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'Exists' property of 'Отмена' button equals 'True'
+        /// </summary>
+        public bool UIОтменаButtonExists = true;
+        
+        /// <summary>
+        /// Verify that the 'Enabled' property of 'Отмена' button equals 'True'
+        /// </summary>
+        public bool UIОтменаButtonEnabled = true;
         #endregion
     }
     
@@ -1246,6 +1486,90 @@ namespace TeacherCodedUITestProject
         
         #region Fields
         private WpfList mUIItemList;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class UIWpfWindow : WpfWindow
+    {
+        
+        public UIWpfWindow()
+        {
+            #region Search Criteria
+            this.SearchProperties.Add(new PropertyExpression(WpfWindow.PropertyNames.ClassName, "HwndWrapper", PropertyExpressionOperator.Contains));
+            #endregion
+        }
+        
+        #region Properties
+        public WpfButton UIДобавитьButton
+        {
+            get
+            {
+                if ((this.mUIДобавитьButton == null))
+                {
+                    this.mUIДобавитьButton = new WpfButton(this);
+                    #region Search Criteria
+                    this.mUIДобавитьButton.SearchProperties[WpfButton.PropertyNames.Name] = "Добавить";
+                    #endregion
+                }
+                return this.mUIДобавитьButton;
+            }
+        }
+        
+        public WpfButton UIУдалитьButton
+        {
+            get
+            {
+                if ((this.mUIУдалитьButton == null))
+                {
+                    this.mUIУдалитьButton = new WpfButton(this);
+                    #region Search Criteria
+                    this.mUIУдалитьButton.SearchProperties[WpfButton.PropertyNames.Name] = "Удалить";
+                    #endregion
+                }
+                return this.mUIУдалитьButton;
+            }
+        }
+        
+        public WpfButton UIГотовоButton
+        {
+            get
+            {
+                if ((this.mUIГотовоButton == null))
+                {
+                    this.mUIГотовоButton = new WpfButton(this);
+                    #region Search Criteria
+                    this.mUIГотовоButton.SearchProperties[WpfButton.PropertyNames.Name] = "Готово";
+                    #endregion
+                }
+                return this.mUIГотовоButton;
+            }
+        }
+        
+        public WpfButton UIОтменаButton
+        {
+            get
+            {
+                if ((this.mUIОтменаButton == null))
+                {
+                    this.mUIОтменаButton = new WpfButton(this);
+                    #region Search Criteria
+                    this.mUIОтменаButton.SearchProperties[WpfButton.PropertyNames.Name] = "Отмена";
+                    #endregion
+                }
+                return this.mUIОтменаButton;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private WpfButton mUIДобавитьButton;
+        
+        private WpfButton mUIУдалитьButton;
+        
+        private WpfButton mUIГотовоButton;
+        
+        private WpfButton mUIОтменаButton;
         #endregion
     }
 }
