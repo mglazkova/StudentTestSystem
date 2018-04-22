@@ -21,6 +21,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		TestCase.docx = TestCase.docx
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeacherCodedUITestProject", "TeacherCodedUITestProject\TeacherCodedUITestProject.csproj", "{58E90684-0401-4795-8BE6-28EDC36D77A5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,10 @@ Global
 		{BE46016A-DDC6-4E4D-9F62-0C2F766AB3E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BE46016A-DDC6-4E4D-9F62-0C2F766AB3E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BE46016A-DDC6-4E4D-9F62-0C2F766AB3E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58E90684-0401-4795-8BE6-28EDC36D77A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58E90684-0401-4795-8BE6-28EDC36D77A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58E90684-0401-4795-8BE6-28EDC36D77A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58E90684-0401-4795-8BE6-28EDC36D77A5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
