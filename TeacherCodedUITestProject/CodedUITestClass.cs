@@ -110,7 +110,7 @@ namespace TeacherCodedUITestProject
             Playback.Wait(1000);
         }
 
-        //Testcase 2.2
+        //Testcase 2.2.1
         [TestMethod]
         public void AddNewQuestionViewCheck()
         {
@@ -122,6 +122,8 @@ namespace TeacherCodedUITestProject
 
             //Открывем форму добавление вопроса
             this.UIMap.QuestionAddNewViewRecorded();
+
+            Playback.Wait(1000);
             //Проверка состояния кнопки "Добавить"
             this.UIMap.AddQuestionView_AddBtnAssert();
             //Проверка состояния кнопки "Удалить"
@@ -134,6 +136,28 @@ namespace TeacherCodedUITestProject
             Playback.Wait(1000);
             //Закрытие формы
             this.UIMap.AddQuestionView_CancelRecorded();
+        }
+
+        //Testcase 2.2.2
+        [TestMethod]
+        public void AddNewQuestionAddWithoutAnswer()
+        {
+            //Открываем форму всех функции редактирования теста
+            this.UIMap.TestEditViewOpenRecorded();
+
+            //Открываем функцию добавления\редактирования вопроса
+            this.UIMap.QuestionListOpenRecorded();
+
+            //Открывем форму добавление вопроса
+            this.UIMap.QuestionAddNewViewRecorded();
+
+            //Нажимаем на кнопку "Готово" без добавления ответов
+            this.UIMap.AddQuestionView_OkWithoutAnswerRecorded();
+
+            Playback.Wait(1000);
+            //Закрытие формы
+            this.UIMap.AddQuestionView_CancelRecorded();
+
         }
 
         #endregion Тестовые сценарии
