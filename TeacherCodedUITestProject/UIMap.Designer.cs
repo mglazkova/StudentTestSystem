@@ -404,6 +404,42 @@ namespace TeacherCodedUITestProject
             Mouse.Click(uIOKButton, new Point(38, 10));
         }
         
+        /// <summary>
+        /// AddQuestionView_AddAnswerRecorded
+        /// </summary>
+        public void AddQuestionView_AddAnswerRecorded()
+        {
+            #region Variable Declarations
+            WpfButton uIДобавитьButton = this.UIWpfWindow.UIДобавитьButton;
+            #endregion
+
+            // Click 'Добавить' button
+            Mouse.Click(uIДобавитьButton, new Point(126, 23));
+
+            // Click 'Добавить' button
+            Mouse.Click(uIДобавитьButton, new Point(117, 23));
+
+            // Click 'Добавить' button
+            Mouse.Click(uIДобавитьButton, new Point(117, 23));
+        }
+        
+        /// <summary>
+        /// AddQuestionView_OkWithoutRightAnswerRecorded
+        /// </summary>
+        public void AddQuestionView_OkWithoutRightAnswerRecorded()
+        {
+            #region Variable Declarations
+            WpfButton uIГотовоButton = this.UIWpfWindow.UIГотовоButton;
+            WinButton uIOKButton = this.UIНетправильногоответаWindow.UIOKWindow.UIOKButton;
+            #endregion
+
+            // Click 'Готово' button
+            Mouse.Click(uIГотовоButton, new Point(43, 22));
+
+            // Click 'OK' button
+            Mouse.Click(uIOKButton, new Point(26, 11));
+        }
+        
         #region Properties
         public virtual TestNameAssertExpectedValues TestNameAssertExpectedValues
         {
@@ -668,6 +704,18 @@ namespace TeacherCodedUITestProject
                 return this.mUIНетвариантовответаWindow;
             }
         }
+        
+        public UIНетправильногоответаWindow UIНетправильногоответаWindow
+        {
+            get
+            {
+                if ((this.mUIНетправильногоответаWindow == null))
+                {
+                    this.mUIНетправильногоответаWindow = new UIНетправильногоответаWindow();
+                }
+                return this.mUIНетправильногоответаWindow;
+            }
+        }
         #endregion
         
         #region Fields
@@ -714,6 +762,8 @@ namespace TeacherCodedUITestProject
         private UIWpfWindow mUIWpfWindow;
         
         private UIНетвариантовответаWindow mUIНетвариантовответаWindow;
+        
+        private UIНетправильногоответаWindow mUIНетправильногоответаWindow;
         #endregion
     }
     
@@ -1661,6 +1711,74 @@ namespace TeacherCodedUITestProject
                     #region Search Criteria
                     this.mUIOKButton.SearchProperties[WinButton.PropertyNames.Name] = "OK";
                     this.mUIOKButton.WindowTitles.Add("Нет вариантов ответа");
+                    #endregion
+                }
+                return this.mUIOKButton;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private WinButton mUIOKButton;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class UIНетправильногоответаWindow : WinWindow
+    {
+        
+        public UIНетправильногоответаWindow()
+        {
+            #region Search Criteria
+            this.SearchProperties[WinWindow.PropertyNames.Name] = "Нет правильного ответа";
+            this.SearchProperties[WinWindow.PropertyNames.ClassName] = "#32770";
+            this.WindowTitles.Add("Нет правильного ответа");
+            #endregion
+        }
+        
+        #region Properties
+        public UIOKWindow1 UIOKWindow
+        {
+            get
+            {
+                if ((this.mUIOKWindow == null))
+                {
+                    this.mUIOKWindow = new UIOKWindow1(this);
+                }
+                return this.mUIOKWindow;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private UIOKWindow1 mUIOKWindow;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class UIOKWindow1 : WinWindow
+    {
+        
+        public UIOKWindow1(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[WinWindow.PropertyNames.ControlId] = "2";
+            this.WindowTitles.Add("Нет правильного ответа");
+            #endregion
+        }
+        
+        #region Properties
+        public WinButton UIOKButton
+        {
+            get
+            {
+                if ((this.mUIOKButton == null))
+                {
+                    this.mUIOKButton = new WinButton(this);
+                    #region Search Criteria
+                    this.mUIOKButton.SearchProperties[WinButton.PropertyNames.Name] = "OK";
+                    this.mUIOKButton.WindowTitles.Add("Нет правильного ответа");
                     #endregion
                 }
                 return this.mUIOKButton;

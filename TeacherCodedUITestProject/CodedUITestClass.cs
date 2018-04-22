@@ -160,6 +160,31 @@ namespace TeacherCodedUITestProject
 
         }
 
+        //Testcase 2.2.3
+        [TestMethod]
+        public void AddNewQuestionAddWithoutRightAnswer()
+        {
+            //Открываем форму всех функции редактирования теста
+            this.UIMap.TestEditViewOpenRecorded();
+
+            //Открываем функцию добавления\редактирования вопроса
+            this.UIMap.QuestionListOpenRecorded();
+
+            //Открывем форму добавление вопроса
+            this.UIMap.QuestionAddNewViewRecorded();
+
+            //Добавляем 3 варианта ответа
+            this.UIMap.AddQuestionView_AddAnswerRecorded();
+
+            //Нажимаем на "Готово" без указания любого ответа правильным
+            this.UIMap.AddQuestionView_OkWithoutRightAnswerRecorded();
+
+            Playback.Wait(1000);
+            //Закрытие формы
+            this.UIMap.AddQuestionView_CancelRecorded();
+
+        }
+
         #endregion Тестовые сценарии
 
         /// <summary>
