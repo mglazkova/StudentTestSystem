@@ -41,11 +41,11 @@
   </Configuration>
   <InitializeActions />
   <ExecuteActions>
-    <MouseAction UIObjectName="UIMap.UICodedUIWindow.UIItemWindow1.UITeacherAppListItem.UIИмяEdit">
+    <MouseAction UIObjectName="UIMap.UICodedUIWindow.UIItemWindow.UITeacherAppexeListItem.UINameEdit">
       <ParameterName />
       <ModifierKeys>None</ModifierKeys>
       <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="56" Y="18" />
+      <Location X="20" Y="7" />
       <WheelDirection>0</WheelDirection>
       <ActionType>DoubleClick</ActionType>
       <MouseButton>Left</MouseButton>
@@ -59,11 +59,11 @@
       <WorkItemId>0</WorkItemId>
       <MarkerRegionType>Action</MarkerRegionType>
     </TestStepMarkerAction>
-    <MouseAction UIObjectName="UIMap.UIСетевыеинформационныWindow.UIЗакрытьButton">
+    <MouseAction UIObjectName="UIMap.UIСетевыеинформационныWindow.UICloseButton">
       <ParameterName />
       <ModifierKeys>None</ModifierKeys>
       <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="12" Y="6" />
+      <Location X="28" Y="14" />
       <WheelDirection>0</WheelDirection>
       <ActionType>Click</ActionType>
       <MouseButton>Left</MouseButton>

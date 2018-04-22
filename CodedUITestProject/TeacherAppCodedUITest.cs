@@ -53,8 +53,9 @@ namespace CodedUITestProject
         [TestCleanup]
         public void CloseApp()
         {
-            this.UIMap.CloseTeacherAppRecordedMethod();
-            }
+            Keyboard.SendKeys(ApplicationUnderTest.Desktop, "{F4}", ModifierKeys.Alt);
+            //this.UIMap.CloseTeacherAppRecordedMethod();
+        }
 
         public UIMap UIMap
         {
