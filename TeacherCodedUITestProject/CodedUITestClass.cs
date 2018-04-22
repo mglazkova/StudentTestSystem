@@ -23,12 +23,6 @@ namespace TeacherCodedUITestProject
         {
         }
 
-        [TestMethod]
-        public void CodedUITestMethod1()
-        {
-            // To generate code for this test, select "Generate Code for Coded UI Test" from the shortcut menu and select one of the menu items.
-        }
-
         [TestInitialize]
         public void StartTeacherApp()
         {
@@ -48,7 +42,28 @@ namespace TeacherCodedUITestProject
         [TestMethod]
         public void TeacherAppUICheck()
         {
-            
+            this.UIMap.TestNameAssert();
+            this.UIMap.TestEditBtnAssert();
+            this.UIMap.TestResultBtnAssert();
+            this.UIMap.AboutBtnAssert();
+            this.UIMap.StatusBarAssert();
+
+        }
+
+        //Testcase 1.2
+        [TestMethod]
+        public void TestEditUICheck()
+        {
+
+            this.UIMap.TestEditViewOpenRecorded();
+
+            //Пауза в секунду
+            Playback.Wait(1000);
+
+            this.UIMap.EditAddBtnAssert();
+            this.UIMap.TestParamBtnAssert();
+            this.UIMap.TestEditView_BackBtnAssert();
+
         }
 
         #endregion Тестовые сценарии
@@ -69,5 +84,20 @@ namespace TeacherCodedUITestProject
             }
         }
         private TestContext testContextInstance;
+
+        public UIMap UIMap
+        {
+            get
+            {
+                if ((this.map == null))
+                {
+                    this.map = new UIMap();
+                }
+
+                return this.map;
+            }
+        }
+
+        private UIMap map;
     }
 }
