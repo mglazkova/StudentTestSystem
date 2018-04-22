@@ -246,6 +246,7 @@ namespace TeacherApp.ViewModel
                     switch (grade)
                     {
                         case Grade.Poor:
+                            limit.FromPer = 0;
                             limit.ToPer = PoorMaxValue;
                             break;
                         case Grade.Satisfactory:
