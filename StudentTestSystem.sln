@@ -12,7 +12,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCFServiceLibrary", "WCFSer
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeacherApp", "TeacherApp\TeacherApp.csproj", "{4F811B57-83DE-4473-897C-EC90F98EA59F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodedUITestProject", "CodedUITestProject\CodedUITestProject.csproj", "{BE46016A-DDC6-4E4D-9F62-0C2F766AB3E7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentAppCodedUITestProject", "CodedUITestProject\StudentAppCodedUITestProject.csproj", "{BE46016A-DDC6-4E4D-9F62-0C2F766AB3E7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{670F8D95-5D07-473E-9A5D-D024032BEAE1}"
 EndProject
