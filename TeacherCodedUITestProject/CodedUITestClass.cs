@@ -221,6 +221,37 @@ namespace TeacherCodedUITestProject
 
         }
 
+        //Testcase 2.2.6
+        [TestMethod]
+        public void AddNewQuestionWithoutQuestionName()
+        {
+            //Открываем форму всех функции редактирования теста
+            this.UIMap.TestEditViewOpenRecorded();
+
+            //Открываем функцию добавления\редактирования вопроса
+            this.UIMap.QuestionListOpenRecorded();
+
+            //Открывем форму добавление вопроса
+            this.UIMap.QuestionAddNewViewRecorded();
+
+
+            Playback.Wait(1000);
+
+            //Добавляем 3 варианта ответа
+            this.UIMap.AddQuestionView_AddAnswerRecorded();
+
+            Playback.Wait(1000);
+
+            //Помечаем первый вопрос правильным
+            this.UIMap.AddQuestionView_CheckFirstAnswerRightRecorded();
+
+            //Нажимаем на "Готово" без добавления текста вопроса
+            this.UIMap.AddQuestionView_OkWithoutQuestionTextRecorded();
+
+            //Закрытие формы
+            this.UIMap.AddQuestionView_CancelRecorded();
+        }
+
         #endregion Тестовые сценарии
 
         /// <summary>

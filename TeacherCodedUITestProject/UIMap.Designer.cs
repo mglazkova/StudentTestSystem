@@ -492,6 +492,23 @@ namespace TeacherCodedUITestProject
             Assert.AreEqual(this.AddQuestionView_QustionItemAddedAssertExpectedValues.UIWCFServiceLibraryQueListItemExists, uIWCFServiceLibraryQueListItem.Exists, "Отсутствует добавленный вопрос в списке");
         }
         
+        /// <summary>
+        /// AddQuestionView_OkWithoutQuestionTextRecorded
+        /// </summary>
+        public void AddQuestionView_OkWithoutQuestionTextRecorded()
+        {
+            #region Variable Declarations
+            WpfButton uIГотовоButton = this.UIWpfWindow.UIГотовоButton;
+            WinButton uIOKButton = this.UIОтсутствуеттекствопрWindow.UIOKWindow.UIOKButton;
+            #endregion
+
+            // Click 'Готово' button
+            Mouse.Click(uIГотовоButton, new Point(42, 15));
+
+            // Click 'OK' button
+            Mouse.Click(uIOKButton, new Point(28, 10));
+        }
+        
         #region Properties
         public virtual TestNameAssertExpectedValues TestNameAssertExpectedValues
         {
@@ -804,6 +821,18 @@ namespace TeacherCodedUITestProject
                 return this.mUIНетправильногоответаWindow;
             }
         }
+        
+        public UIОтсутствуеттекствопрWindow UIОтсутствуеттекствопрWindow
+        {
+            get
+            {
+                if ((this.mUIОтсутствуеттекствопрWindow == null))
+                {
+                    this.mUIОтсутствуеттекствопрWindow = new UIОтсутствуеттекствопрWindow();
+                }
+                return this.mUIОтсутствуеттекствопрWindow;
+            }
+        }
         #endregion
         
         #region Fields
@@ -858,6 +887,8 @@ namespace TeacherCodedUITestProject
         private UIНетвариантовответаWindow mUIНетвариантовответаWindow;
         
         private UIНетправильногоответаWindow mUIНетправильногоответаWindow;
+        
+        private UIОтсутствуеттекствопрWindow mUIОтсутствуеттекствопрWindow;
         #endregion
     }
     
@@ -2055,6 +2086,74 @@ namespace TeacherCodedUITestProject
                     #region Search Criteria
                     this.mUIOKButton.SearchProperties[WinButton.PropertyNames.Name] = "OK";
                     this.mUIOKButton.WindowTitles.Add("Нет правильного ответа");
+                    #endregion
+                }
+                return this.mUIOKButton;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private WinButton mUIOKButton;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class UIОтсутствуеттекствопрWindow : WinWindow
+    {
+        
+        public UIОтсутствуеттекствопрWindow()
+        {
+            #region Search Criteria
+            this.SearchProperties[WinWindow.PropertyNames.Name] = "Отсутствует текст вопроса";
+            this.SearchProperties[WinWindow.PropertyNames.ClassName] = "#32770";
+            this.WindowTitles.Add("Отсутствует текст вопроса");
+            #endregion
+        }
+        
+        #region Properties
+        public UIOKWindow2 UIOKWindow
+        {
+            get
+            {
+                if ((this.mUIOKWindow == null))
+                {
+                    this.mUIOKWindow = new UIOKWindow2(this);
+                }
+                return this.mUIOKWindow;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private UIOKWindow2 mUIOKWindow;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class UIOKWindow2 : WinWindow
+    {
+        
+        public UIOKWindow2(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[WinWindow.PropertyNames.ControlId] = "2";
+            this.WindowTitles.Add("Отсутствует текст вопроса");
+            #endregion
+        }
+        
+        #region Properties
+        public WinButton UIOKButton
+        {
+            get
+            {
+                if ((this.mUIOKButton == null))
+                {
+                    this.mUIOKButton = new WinButton(this);
+                    #region Search Criteria
+                    this.mUIOKButton.SearchProperties[WinButton.PropertyNames.Name] = "OK";
+                    this.mUIOKButton.WindowTitles.Add("Отсутствует текст вопроса");
                     #endregion
                 }
                 return this.mUIOKButton;
