@@ -44,7 +44,9 @@ namespace CodedUITestProject
         [TestInitialize]
         public void StartTeacherApp()
         {
-            UIMap.StartTeacherRecordedMethod();
+            ApplicationUnderTest.Launch(@"D:\CodedUI\TeacherApp.exe");
+
+           // UIMap.StartTeacherRecordedMethod();
         }
 
 
@@ -168,6 +170,15 @@ namespace CodedUITestProject
             this.UIMap.NewQuestionCancelBtnExistAssertMethod();
 
             this.UIMap.AddQuestionCancelRecordedMethod();
+        }
+
+        //Testcase 2.2.2
+        [TestMethod()]
+        public void AddQuestionWithoutAnswerCheck()
+        {
+            UIMap.OpneEditWindowRecordedMethod();
+
+            this.UIMap.NewQuestionWindowOpenRecordedMethod();
         }
 
         #endregion Возможность редактирования теста
