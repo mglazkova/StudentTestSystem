@@ -167,6 +167,135 @@ namespace TeacherCodedUITestProject
             Assert.AreEqual(this.TestEditView_BackBtnAssertExpectedValues.UIНазадButtonEnabled, uIНазадButton.Enabled, "Кнопка \"Назад\" недоступна");
         }
         
+        /// <summary>
+        /// TestEditViewBackRecorded
+        /// </summary>
+        public void TestEditViewBackRecorded()
+        {
+            #region Variable Declarations
+            WpfButton uIНазадButton = this.UIСетевыеинформационныWindow.UIItemCustom.UIItemCustom11.UIНазадButton;
+            #endregion
+
+            // Click 'Назад' button
+            Mouse.Click(uIНазадButton, new Point(89, 15));
+        }
+        
+        /// <summary>
+        /// QuestionListOpenRecorded
+        /// </summary>
+        public void QuestionListOpenRecorded()
+        {
+            #region Variable Declarations
+            WpfButton uIРедактироватьдобавитButton = this.UIСетевыеинформационныWindow.UIItemCustom.UIItemCustom11.UIРедактироватьдобавитButton;
+            #endregion
+
+            // Click 'Редактировать/добавить' button
+            Mouse.Click(uIРедактироватьдобавитButton, new Point(141, 28));
+        }
+        
+        /// <summary>
+        /// EditBtnDefaultAssert - Use 'EditBtnDefaultAssertExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void EditBtnDefaultAssert()
+        {
+            #region Variable Declarations
+            WpfButton uIРедактироватьButton = this.UIСетевыеинформационныWindow.UIItemCustom.UIItemCustom12.UIРедактироватьButton;
+            #endregion
+
+            // Verify that the 'Exists' property of 'Редактировать' button equals 'True'
+            Assert.AreEqual(this.EditBtnDefaultAssertExpectedValues.UIРедактироватьButtonExists, uIРедактироватьButton.Exists, "Кнопка \"Редактировать\" отсутствует");
+
+            // Verify that the 'Enabled' property of 'Редактировать' button equals 'False'
+            Assert.AreEqual(this.EditBtnDefaultAssertExpectedValues.UIРедактироватьButtonEnabled, uIРедактироватьButton.Enabled, "Кнопка \"Редактировать\" доступна по умолчанию");
+        }
+        
+        /// <summary>
+        /// DeleteQuestionBtnDefaultAssert - Use 'DeleteQuestionBtnDefaultAssertExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void DeleteQuestionBtnDefaultAssert()
+        {
+            #region Variable Declarations
+            WpfButton uIУдалитьButton = this.UIСетевыеинформационныWindow.UIItemCustom.UIItemCustom12.UIУдалитьButton;
+            #endregion
+
+            // Verify that the 'Exists' property of 'Удалить' button equals 'True'
+            Assert.AreEqual(this.DeleteQuestionBtnDefaultAssertExpectedValues.UIУдалитьButtonExists, uIУдалитьButton.Exists, "Кнопка \"Удалить\" отсутствует");
+
+            // Verify that the 'Enabled' property of 'Удалить' button equals 'False'
+            Assert.AreEqual(this.DeleteQuestionBtnDefaultAssertExpectedValues.UIУдалитьButtonEnabled, uIУдалитьButton.Enabled, "Кнопка \"Удалить\" доступна по умолчанию");
+        }
+        
+        /// <summary>
+        /// AddNewQuestionBtnDefaultAssert - Use 'AddNewQuestionBtnDefaultAssertExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void AddNewQuestionBtnDefaultAssert()
+        {
+            #region Variable Declarations
+            WpfButton uIДобавитьновыйButton = this.UIСетевыеинформационныWindow.UIItemCustom.UIItemCustom12.UIДобавитьновыйButton;
+            #endregion
+
+            // Verify that the 'Exists' property of 'Добавить новый' button equals 'True'
+            Assert.AreEqual(this.AddNewQuestionBtnDefaultAssertExpectedValues.UIДобавитьновыйButtonExists, uIДобавитьновыйButton.Exists, "Кнопка \"Добавить новый\" отсутствует");
+
+            // Verify that the 'Enabled' property of 'Добавить новый' button equals 'True'
+            Assert.AreEqual(this.AddNewQuestionBtnDefaultAssertExpectedValues.UIДобавитьновыйButtonEnabled, uIДобавитьновыйButton.Enabled, "Кнопка \"Добавить новый\"  недоступна по умолчанию");
+        }
+        
+        /// <summary>
+        /// QuestionAddEditView_BackBtnAssert - Use 'QuestionAddEditView_BackBtnAssertExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void QuestionAddEditView_BackBtnAssert()
+        {
+            #region Variable Declarations
+            WpfButton uIНазадButton = this.UIСетевыеинформационныWindow.UIItemCustom.UIItemCustom12.UIНазадButton;
+            #endregion
+
+            // Verify that the 'Exists' property of 'Назад' button equals 'True'
+            Assert.AreEqual(this.QuestionAddEditView_BackBtnAssertExpectedValues.UIНазадButtonExists, uIНазадButton.Exists, "Кнопка \"Назад\" отсутствует");
+
+            // Verify that the 'Enabled' property of 'Назад' button equals 'True'
+            Assert.AreEqual(this.QuestionAddEditView_BackBtnAssertExpectedValues.UIНазадButtonEnabled, uIНазадButton.Enabled, "Кнопка \"Назад\" недоступна по умолчанию");
+        }
+        
+        /// <summary>
+        /// QuestionListSelectFirstRecorded - Use 'QuestionListSelectFirstRecordedParams' to pass parameters into this method.
+        /// </summary>
+        public void QuestionListSelectFirstRecorded()
+        {
+            #region Variable Declarations
+            WpfList uIItemList = this.UIСетевыеинформационныWindow.UIItemCustom1.UIСписоквопросовText.UIItemList;
+            #endregion
+
+            // Select 'WCFServiceLibrary.Question' in first list box next to 'Список вопросов:' label
+            uIItemList.SelectedItemsAsString = this.QuestionListSelectFirstRecordedParams.UIItemListSelectedItemsAsString;
+        }
+        
+        /// <summary>
+        /// QuestionListSelected_EditAddBtnAssert - Use 'QuestionListSelected_EditAddBtnAssertExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void QuestionListSelected_EditAddBtnAssert()
+        {
+            #region Variable Declarations
+            WpfButton uIРедактироватьButton = this.UIСетевыеинформационныWindow.UIItemCustom.UIItemCustom12.UIРедактироватьButton;
+            #endregion
+
+            // Verify that the 'Enabled' property of 'Редактировать' button equals 'True'
+            Assert.AreEqual(this.QuestionListSelected_EditAddBtnAssertExpectedValues.UIРедактироватьButtonEnabled, uIРедактироватьButton.Enabled, "Кнопка \"Редактировать\" недоступна при выбранном вопросе");
+        }
+        
+        /// <summary>
+        /// QuestionListSelected_QuestionDeleteBtnAssert - Use 'QuestionListSelected_QuestionDeleteBtnAssertExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void QuestionListSelected_QuestionDeleteBtnAssert()
+        {
+            #region Variable Declarations
+            WpfButton uIУдалитьButton = this.UIСетевыеинформационныWindow.UIItemCustom.UIItemCustom12.UIУдалитьButton;
+            #endregion
+
+            // Verify that the 'Enabled' property of 'Удалить' button equals 'True'
+            Assert.AreEqual(this.QuestionListSelected_QuestionDeleteBtnAssertExpectedValues.UIУдалитьButtonEnabled, uIУдалитьButton.Enabled, "Кнопка \"Удалить\" недоступна при выбранном вопросе");
+        }
+        
         #region Properties
         public virtual TestNameAssertExpectedValues TestNameAssertExpectedValues
         {
@@ -264,6 +393,90 @@ namespace TeacherCodedUITestProject
             }
         }
         
+        public virtual EditBtnDefaultAssertExpectedValues EditBtnDefaultAssertExpectedValues
+        {
+            get
+            {
+                if ((this.mEditBtnDefaultAssertExpectedValues == null))
+                {
+                    this.mEditBtnDefaultAssertExpectedValues = new EditBtnDefaultAssertExpectedValues();
+                }
+                return this.mEditBtnDefaultAssertExpectedValues;
+            }
+        }
+        
+        public virtual DeleteQuestionBtnDefaultAssertExpectedValues DeleteQuestionBtnDefaultAssertExpectedValues
+        {
+            get
+            {
+                if ((this.mDeleteQuestionBtnDefaultAssertExpectedValues == null))
+                {
+                    this.mDeleteQuestionBtnDefaultAssertExpectedValues = new DeleteQuestionBtnDefaultAssertExpectedValues();
+                }
+                return this.mDeleteQuestionBtnDefaultAssertExpectedValues;
+            }
+        }
+        
+        public virtual AddNewQuestionBtnDefaultAssertExpectedValues AddNewQuestionBtnDefaultAssertExpectedValues
+        {
+            get
+            {
+                if ((this.mAddNewQuestionBtnDefaultAssertExpectedValues == null))
+                {
+                    this.mAddNewQuestionBtnDefaultAssertExpectedValues = new AddNewQuestionBtnDefaultAssertExpectedValues();
+                }
+                return this.mAddNewQuestionBtnDefaultAssertExpectedValues;
+            }
+        }
+        
+        public virtual QuestionAddEditView_BackBtnAssertExpectedValues QuestionAddEditView_BackBtnAssertExpectedValues
+        {
+            get
+            {
+                if ((this.mQuestionAddEditView_BackBtnAssertExpectedValues == null))
+                {
+                    this.mQuestionAddEditView_BackBtnAssertExpectedValues = new QuestionAddEditView_BackBtnAssertExpectedValues();
+                }
+                return this.mQuestionAddEditView_BackBtnAssertExpectedValues;
+            }
+        }
+        
+        public virtual QuestionListSelectFirstRecordedParams QuestionListSelectFirstRecordedParams
+        {
+            get
+            {
+                if ((this.mQuestionListSelectFirstRecordedParams == null))
+                {
+                    this.mQuestionListSelectFirstRecordedParams = new QuestionListSelectFirstRecordedParams();
+                }
+                return this.mQuestionListSelectFirstRecordedParams;
+            }
+        }
+        
+        public virtual QuestionListSelected_EditAddBtnAssertExpectedValues QuestionListSelected_EditAddBtnAssertExpectedValues
+        {
+            get
+            {
+                if ((this.mQuestionListSelected_EditAddBtnAssertExpectedValues == null))
+                {
+                    this.mQuestionListSelected_EditAddBtnAssertExpectedValues = new QuestionListSelected_EditAddBtnAssertExpectedValues();
+                }
+                return this.mQuestionListSelected_EditAddBtnAssertExpectedValues;
+            }
+        }
+        
+        public virtual QuestionListSelected_QuestionDeleteBtnAssertExpectedValues QuestionListSelected_QuestionDeleteBtnAssertExpectedValues
+        {
+            get
+            {
+                if ((this.mQuestionListSelected_QuestionDeleteBtnAssertExpectedValues == null))
+                {
+                    this.mQuestionListSelected_QuestionDeleteBtnAssertExpectedValues = new QuestionListSelected_QuestionDeleteBtnAssertExpectedValues();
+                }
+                return this.mQuestionListSelected_QuestionDeleteBtnAssertExpectedValues;
+            }
+        }
+        
         public UIСетевыеинформационныWindow UIСетевыеинформационныWindow
         {
             get
@@ -293,6 +506,20 @@ namespace TeacherCodedUITestProject
         private TestParamBtnAssertExpectedValues mTestParamBtnAssertExpectedValues;
         
         private TestEditView_BackBtnAssertExpectedValues mTestEditView_BackBtnAssertExpectedValues;
+        
+        private EditBtnDefaultAssertExpectedValues mEditBtnDefaultAssertExpectedValues;
+        
+        private DeleteQuestionBtnDefaultAssertExpectedValues mDeleteQuestionBtnDefaultAssertExpectedValues;
+        
+        private AddNewQuestionBtnDefaultAssertExpectedValues mAddNewQuestionBtnDefaultAssertExpectedValues;
+        
+        private QuestionAddEditView_BackBtnAssertExpectedValues mQuestionAddEditView_BackBtnAssertExpectedValues;
+        
+        private QuestionListSelectFirstRecordedParams mQuestionListSelectFirstRecordedParams;
+        
+        private QuestionListSelected_EditAddBtnAssertExpectedValues mQuestionListSelected_EditAddBtnAssertExpectedValues;
+        
+        private QuestionListSelected_QuestionDeleteBtnAssertExpectedValues mQuestionListSelected_QuestionDeleteBtnAssertExpectedValues;
         
         private UIСетевыеинформационныWindow mUIСетевыеинформационныWindow;
         #endregion
@@ -453,6 +680,131 @@ namespace TeacherCodedUITestProject
         #endregion
     }
     
+    /// <summary>
+    /// Parameters to be passed into 'EditBtnDefaultAssert'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class EditBtnDefaultAssertExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'Exists' property of 'Редактировать' button equals 'True'
+        /// </summary>
+        public bool UIРедактироватьButtonExists = true;
+        
+        /// <summary>
+        /// Verify that the 'Enabled' property of 'Редактировать' button equals 'False'
+        /// </summary>
+        public bool UIРедактироватьButtonEnabled = false;
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'DeleteQuestionBtnDefaultAssert'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class DeleteQuestionBtnDefaultAssertExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'Exists' property of 'Удалить' button equals 'True'
+        /// </summary>
+        public bool UIУдалитьButtonExists = true;
+        
+        /// <summary>
+        /// Verify that the 'Enabled' property of 'Удалить' button equals 'False'
+        /// </summary>
+        public bool UIУдалитьButtonEnabled = false;
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'AddNewQuestionBtnDefaultAssert'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class AddNewQuestionBtnDefaultAssertExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'Exists' property of 'Добавить новый' button equals 'True'
+        /// </summary>
+        public bool UIДобавитьновыйButtonExists = true;
+        
+        /// <summary>
+        /// Verify that the 'Enabled' property of 'Добавить новый' button equals 'True'
+        /// </summary>
+        public bool UIДобавитьновыйButtonEnabled = true;
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'QuestionAddEditView_BackBtnAssert'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class QuestionAddEditView_BackBtnAssertExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'Exists' property of 'Назад' button equals 'True'
+        /// </summary>
+        public bool UIНазадButtonExists = true;
+        
+        /// <summary>
+        /// Verify that the 'Enabled' property of 'Назад' button equals 'True'
+        /// </summary>
+        public bool UIНазадButtonEnabled = true;
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'QuestionListSelectFirstRecorded'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class QuestionListSelectFirstRecordedParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Select 'WCFServiceLibrary.Question' in first list box next to 'Список вопросов:' label
+        /// </summary>
+        public string UIItemListSelectedItemsAsString = "WCFServiceLibrary.Question";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'QuestionListSelected_EditAddBtnAssert'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class QuestionListSelected_EditAddBtnAssertExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'Enabled' property of 'Редактировать' button equals 'True'
+        /// </summary>
+        public bool UIРедактироватьButtonEnabled = true;
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'QuestionListSelected_QuestionDeleteBtnAssert'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class QuestionListSelected_QuestionDeleteBtnAssertExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'Enabled' property of 'Удалить' button equals 'True'
+        /// </summary>
+        public bool UIУдалитьButtonEnabled = true;
+        #endregion
+    }
+    
     [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
     public class UIСетевыеинформационныWindow : WpfWindow
     {
@@ -510,6 +862,18 @@ namespace TeacherCodedUITestProject
                 return this.mUIСервисдлятестированиText;
             }
         }
+        
+        public UIItemCustom13 UIItemCustom1
+        {
+            get
+            {
+                if ((this.mUIItemCustom1 == null))
+                {
+                    this.mUIItemCustom1 = new UIItemCustom13(this);
+                }
+                return this.mUIItemCustom1;
+            }
+        }
         #endregion
         
         #region Fields
@@ -518,6 +882,8 @@ namespace TeacherCodedUITestProject
         private WpfButton mUIОпрограммеButton;
         
         private WpfText mUIСервисдлятестированиText;
+        
+        private UIItemCustom13 mUIItemCustom1;
         #endregion
     }
     
@@ -558,12 +924,26 @@ namespace TeacherCodedUITestProject
                 return this.mUIItemCustom11;
             }
         }
+        
+        public UIItemCustom12 UIItemCustom12
+        {
+            get
+            {
+                if ((this.mUIItemCustom12 == null))
+                {
+                    this.mUIItemCustom12 = new UIItemCustom12(this);
+                }
+                return this.mUIItemCustom12;
+            }
+        }
         #endregion
         
         #region Fields
         private UIItemCustom1 mUIItemCustom1;
         
         private UIItemCustom11 mUIItemCustom11;
+        
+        private UIItemCustom12 mUIItemCustom12;
         #endregion
     }
     
@@ -708,6 +1088,164 @@ namespace TeacherCodedUITestProject
         private WpfButton mUIЗадатьпараметрытестаButton;
         
         private WpfButton mUIНазадButton;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class UIItemCustom12 : WpfCustom
+    {
+        
+        public UIItemCustom12(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[WpfControl.PropertyNames.ClassName] = "Uia.TeacherAddAndEditQuestions";
+            this.WindowTitles.Add("Сетевые информационные технологии");
+            #endregion
+        }
+        
+        #region Properties
+        public WpfButton UIРедактироватьButton
+        {
+            get
+            {
+                if ((this.mUIРедактироватьButton == null))
+                {
+                    this.mUIРедактироватьButton = new WpfButton(this);
+                    #region Search Criteria
+                    this.mUIРедактироватьButton.SearchProperties[WpfButton.PropertyNames.AutomationId] = "editBtn";
+                    this.mUIРедактироватьButton.WindowTitles.Add("Сетевые информационные технологии");
+                    #endregion
+                }
+                return this.mUIРедактироватьButton;
+            }
+        }
+        
+        public WpfButton UIУдалитьButton
+        {
+            get
+            {
+                if ((this.mUIУдалитьButton == null))
+                {
+                    this.mUIУдалитьButton = new WpfButton(this);
+                    #region Search Criteria
+                    this.mUIУдалитьButton.SearchProperties[WpfButton.PropertyNames.AutomationId] = "deleteBtn";
+                    this.mUIУдалитьButton.WindowTitles.Add("Сетевые информационные технологии");
+                    #endregion
+                }
+                return this.mUIУдалитьButton;
+            }
+        }
+        
+        public WpfButton UIДобавитьновыйButton
+        {
+            get
+            {
+                if ((this.mUIДобавитьновыйButton == null))
+                {
+                    this.mUIДобавитьновыйButton = new WpfButton(this);
+                    #region Search Criteria
+                    this.mUIДобавитьновыйButton.SearchProperties[WpfButton.PropertyNames.AutomationId] = "newBtn";
+                    this.mUIДобавитьновыйButton.WindowTitles.Add("Сетевые информационные технологии");
+                    #endregion
+                }
+                return this.mUIДобавитьновыйButton;
+            }
+        }
+        
+        public WpfButton UIНазадButton
+        {
+            get
+            {
+                if ((this.mUIНазадButton == null))
+                {
+                    this.mUIНазадButton = new WpfButton(this);
+                    #region Search Criteria
+                    this.mUIНазадButton.SearchProperties[WpfButton.PropertyNames.AutomationId] = "backBtn";
+                    this.mUIНазадButton.WindowTitles.Add("Сетевые информационные технологии");
+                    #endregion
+                }
+                return this.mUIНазадButton;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private WpfButton mUIРедактироватьButton;
+        
+        private WpfButton mUIУдалитьButton;
+        
+        private WpfButton mUIДобавитьновыйButton;
+        
+        private WpfButton mUIНазадButton;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class UIItemCustom13 : WpfCustom
+    {
+        
+        public UIItemCustom13(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[WpfControl.PropertyNames.ClassName] = "Uia.TeacherAddAndEditQuestions";
+            this.WindowTitles.Add("Сетевые информационные технологии");
+            #endregion
+        }
+        
+        #region Properties
+        public UIСписоквопросовText UIСписоквопросовText
+        {
+            get
+            {
+                if ((this.mUIСписоквопросовText == null))
+                {
+                    this.mUIСписоквопросовText = new UIСписоквопросовText(this);
+                }
+                return this.mUIСписоквопросовText;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private UIСписоквопросовText mUIСписоквопросовText;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class UIСписоквопросовText : WpfText
+    {
+        
+        public UIСписоквопросовText(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[WpfText.PropertyNames.Name] = " Список вопросов:";
+            this.WindowTitles.Add("Сетевые информационные технологии");
+            #endregion
+        }
+        
+        #region Properties
+        public WpfList UIItemList
+        {
+            get
+            {
+                if ((this.mUIItemList == null))
+                {
+                    this.mUIItemList = new WpfList(this);
+                    #region Search Criteria
+                    this.mUIItemList.SearchConfigurations.Add(SearchConfiguration.NextSibling);
+                    this.mUIItemList.WindowTitles.Add("Сетевые информационные технологии");
+                    #endregion
+                }
+                return this.mUIItemList;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private WpfList mUIItemList;
         #endregion
     }
 }

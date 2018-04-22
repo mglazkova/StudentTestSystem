@@ -66,6 +66,50 @@ namespace TeacherCodedUITestProject
 
         }
 
+        //Testcase 1.3
+        [TestMethod]
+        public void BackFromFunctionViewCheck()
+        {
+            this.UIMap.TestEditViewOpenRecorded();
+
+            //Пауза в секунду
+            Playback.Wait(1000);
+
+            this.UIMap.TestEditViewBackRecorded();
+
+        }
+
+        //Testcase 2.1
+        [TestMethod]
+        public void TestEditFormUICheck()
+        {
+            //Открываем форму всех функции редактирования теста
+            this.UIMap.TestEditViewOpenRecorded();
+
+            //Открываем функцию добавления\редактирования вопроса
+            this.UIMap.QuestionListOpenRecorded();
+
+
+            //Пауза в секунду
+            Playback.Wait(1000);
+
+            //Проверяем наличие кнопко и их доступность по умолчанию
+            this.UIMap.EditBtnDefaultAssert();
+            this.UIMap.DeleteQuestionBtnDefaultAssert();
+            this.UIMap.AddNewQuestionBtnDefaultAssert();
+            this.UIMap.QuestionAddEditView_BackBtnAssert();
+
+            Playback.Wait(1000);
+            //Выбираем первый вопрос из списка
+            this.UIMap.QuestionListSelectFirstRecorded();
+
+            //Проверяем доступность кнопок после выбора вопроса в списке
+            this.UIMap.QuestionListSelected_EditAddBtnAssert();
+            this.UIMap.QuestionListSelected_QuestionDeleteBtnAssert();
+
+            Playback.Wait(1000);
+        }
+
         #endregion Тестовые сценарии
 
         /// <summary>
