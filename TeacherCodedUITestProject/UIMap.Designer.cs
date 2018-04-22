@@ -440,6 +440,58 @@ namespace TeacherCodedUITestProject
             Mouse.Click(uIOKButton, new Point(26, 11));
         }
         
+        /// <summary>
+        /// AddQuestionView_CheckFirstAnswerRightRecorded - Use 'AddQuestionView_CheckFirstAnswerRightRecordedParams' to pass parameters into this method.
+        /// </summary>
+        public void AddQuestionView_CheckFirstAnswerRightRecorded()
+        {
+            #region Variable Declarations
+            WpfCheckBox uIItemCheckBox = this.UIWpfWindow.UIItemList.UIWCFServiceLibraryAnsListItem.UIItemCheckBox;
+            #endregion
+
+            // Select check box
+            uIItemCheckBox.Checked = this.AddQuestionView_CheckFirstAnswerRightRecordedParams.UIItemCheckBoxChecked;
+        }
+        
+        /// <summary>
+        /// AddQuestionView_SetQuestionTextRecorded - Use 'AddQuestionView_SetQuestionTextRecordedParams' to pass parameters into this method.
+        /// </summary>
+        public void AddQuestionView_SetQuestionTextRecorded()
+        {
+            #region Variable Declarations
+            WpfEdit uIItemEdit = this.UIWpfWindow.UIItemEdit;
+            #endregion
+
+            // Type 'Первый вопрос' in text box
+            uIItemEdit.Text = this.AddQuestionView_SetQuestionTextRecordedParams.UIItemEditText;
+        }
+        
+        /// <summary>
+        /// AddQuestionView_OkRecorded
+        /// </summary>
+        public void AddQuestionView_OkRecorded()
+        {
+            #region Variable Declarations
+            WpfButton uIГотовоButton = this.UIWpfWindow.UIГотовоButton;
+            #endregion
+
+            // Click 'Готово' button
+            Mouse.Click(uIГотовоButton, new Point(55, 8));
+        }
+        
+        /// <summary>
+        /// AddQuestionView_QustionItemAddedAssert - Use 'AddQuestionView_QustionItemAddedAssertExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void AddQuestionView_QustionItemAddedAssert()
+        {
+            #region Variable Declarations
+            WpfListItem uIWCFServiceLibraryQueListItem = this.UIСетевыеинформационныWindow.UIItemCustom1.UIItemList.UIWCFServiceLibraryQueListItem;
+            #endregion
+
+            // Verify that the 'Exists' property of 'WCFServiceLibrary.Question' list item equals 'True'
+            Assert.AreEqual(this.AddQuestionView_QustionItemAddedAssertExpectedValues.UIWCFServiceLibraryQueListItemExists, uIWCFServiceLibraryQueListItem.Exists, "Отсутствует добавленный вопрос в списке");
+        }
+        
         #region Properties
         public virtual TestNameAssertExpectedValues TestNameAssertExpectedValues
         {
@@ -669,6 +721,42 @@ namespace TeacherCodedUITestProject
             }
         }
         
+        public virtual AddQuestionView_CheckFirstAnswerRightRecordedParams AddQuestionView_CheckFirstAnswerRightRecordedParams
+        {
+            get
+            {
+                if ((this.mAddQuestionView_CheckFirstAnswerRightRecordedParams == null))
+                {
+                    this.mAddQuestionView_CheckFirstAnswerRightRecordedParams = new AddQuestionView_CheckFirstAnswerRightRecordedParams();
+                }
+                return this.mAddQuestionView_CheckFirstAnswerRightRecordedParams;
+            }
+        }
+        
+        public virtual AddQuestionView_SetQuestionTextRecordedParams AddQuestionView_SetQuestionTextRecordedParams
+        {
+            get
+            {
+                if ((this.mAddQuestionView_SetQuestionTextRecordedParams == null))
+                {
+                    this.mAddQuestionView_SetQuestionTextRecordedParams = new AddQuestionView_SetQuestionTextRecordedParams();
+                }
+                return this.mAddQuestionView_SetQuestionTextRecordedParams;
+            }
+        }
+        
+        public virtual AddQuestionView_QustionItemAddedAssertExpectedValues AddQuestionView_QustionItemAddedAssertExpectedValues
+        {
+            get
+            {
+                if ((this.mAddQuestionView_QustionItemAddedAssertExpectedValues == null))
+                {
+                    this.mAddQuestionView_QustionItemAddedAssertExpectedValues = new AddQuestionView_QustionItemAddedAssertExpectedValues();
+                }
+                return this.mAddQuestionView_QustionItemAddedAssertExpectedValues;
+            }
+        }
+        
         public UIСетевыеинформационныWindow UIСетевыеинформационныWindow
         {
             get
@@ -756,6 +844,12 @@ namespace TeacherCodedUITestProject
         private AddQuestionView_OkBtnAssertExpectedValues mAddQuestionView_OkBtnAssertExpectedValues;
         
         private AddQuestionView_CancelBtnAssertExpectedValues mAddQuestionView_CancelBtnAssertExpectedValues;
+        
+        private AddQuestionView_CheckFirstAnswerRightRecordedParams mAddQuestionView_CheckFirstAnswerRightRecordedParams;
+        
+        private AddQuestionView_SetQuestionTextRecordedParams mAddQuestionView_SetQuestionTextRecordedParams;
+        
+        private AddQuestionView_QustionItemAddedAssertExpectedValues mAddQuestionView_QustionItemAddedAssertExpectedValues;
         
         private UIСетевыеинформационныWindow mUIСетевыеинформационныWindow;
         
@@ -1124,6 +1218,51 @@ namespace TeacherCodedUITestProject
         /// Verify that the 'Enabled' property of 'Отмена' button equals 'True'
         /// </summary>
         public bool UIОтменаButtonEnabled = true;
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'AddQuestionView_CheckFirstAnswerRightRecorded'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class AddQuestionView_CheckFirstAnswerRightRecordedParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Select check box
+        /// </summary>
+        public bool UIItemCheckBoxChecked = true;
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'AddQuestionView_SetQuestionTextRecorded'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class AddQuestionView_SetQuestionTextRecordedParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Type 'Первый вопрос' in text box
+        /// </summary>
+        public string UIItemEditText = "Первый вопрос";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'AddQuestionView_QustionItemAddedAssert'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class AddQuestionView_QustionItemAddedAssertExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'Exists' property of 'WCFServiceLibrary.Question' list item equals 'True'
+        /// </summary>
+        public bool UIWCFServiceLibraryQueListItemExists = true;
         #endregion
     }
     
@@ -1528,10 +1667,24 @@ namespace TeacherCodedUITestProject
                 return this.mUIСписоквопросовText;
             }
         }
+        
+        public UIItemList UIItemList
+        {
+            get
+            {
+                if ((this.mUIItemList == null))
+                {
+                    this.mUIItemList = new UIItemList(this);
+                }
+                return this.mUIItemList;
+            }
+        }
         #endregion
         
         #region Fields
         private UIСписоквопросовText mUIСписоквопросовText;
+        
+        private UIItemList mUIItemList;
         #endregion
     }
     
@@ -1568,6 +1721,42 @@ namespace TeacherCodedUITestProject
         
         #region Fields
         private WpfList mUIItemList;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class UIItemList : WpfList
+    {
+        
+        public UIItemList(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.WindowTitles.Add("Сетевые информационные технологии");
+            #endregion
+        }
+        
+        #region Properties
+        public WpfListItem UIWCFServiceLibraryQueListItem
+        {
+            get
+            {
+                if ((this.mUIWCFServiceLibraryQueListItem == null))
+                {
+                    this.mUIWCFServiceLibraryQueListItem = new WpfListItem(this);
+                    #region Search Criteria
+                    this.mUIWCFServiceLibraryQueListItem.SearchProperties[WpfListItem.PropertyNames.Name] = "WCFServiceLibrary.Question";
+                    this.mUIWCFServiceLibraryQueListItem.SearchProperties[WpfListItem.PropertyNames.Instance] = "6";
+                    this.mUIWCFServiceLibraryQueListItem.WindowTitles.Add("Сетевые информационные технологии");
+                    #endregion
+                }
+                return this.mUIWCFServiceLibraryQueListItem;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private WpfListItem mUIWCFServiceLibraryQueListItem;
         #endregion
     }
     
@@ -1642,6 +1831,30 @@ namespace TeacherCodedUITestProject
                 return this.mUIОтменаButton;
             }
         }
+        
+        public UIItemList1 UIItemList
+        {
+            get
+            {
+                if ((this.mUIItemList == null))
+                {
+                    this.mUIItemList = new UIItemList1(this);
+                }
+                return this.mUIItemList;
+            }
+        }
+        
+        public WpfEdit UIItemEdit
+        {
+            get
+            {
+                if ((this.mUIItemEdit == null))
+                {
+                    this.mUIItemEdit = new WpfEdit(this);
+                }
+                return this.mUIItemEdit;
+            }
+        }
         #endregion
         
         #region Fields
@@ -1652,6 +1865,69 @@ namespace TeacherCodedUITestProject
         private WpfButton mUIГотовоButton;
         
         private WpfButton mUIОтменаButton;
+        
+        private UIItemList1 mUIItemList;
+        
+        private WpfEdit mUIItemEdit;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class UIItemList1 : WpfList
+    {
+        
+        public UIItemList1(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+        }
+        
+        #region Properties
+        public UIWCFServiceLibraryAnsListItem UIWCFServiceLibraryAnsListItem
+        {
+            get
+            {
+                if ((this.mUIWCFServiceLibraryAnsListItem == null))
+                {
+                    this.mUIWCFServiceLibraryAnsListItem = new UIWCFServiceLibraryAnsListItem(this);
+                }
+                return this.mUIWCFServiceLibraryAnsListItem;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private UIWCFServiceLibraryAnsListItem mUIWCFServiceLibraryAnsListItem;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class UIWCFServiceLibraryAnsListItem : WpfListItem
+    {
+        
+        public UIWCFServiceLibraryAnsListItem(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[WpfListItem.PropertyNames.Name] = "WCFServiceLibrary.Answer";
+            #endregion
+        }
+        
+        #region Properties
+        public WpfCheckBox UIItemCheckBox
+        {
+            get
+            {
+                if ((this.mUIItemCheckBox == null))
+                {
+                    this.mUIItemCheckBox = new WpfCheckBox(this);
+                }
+                return this.mUIItemCheckBox;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private WpfCheckBox mUIItemCheckBox;
         #endregion
     }
     
