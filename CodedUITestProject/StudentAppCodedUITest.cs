@@ -86,10 +86,13 @@ namespace CodedUITestProject
             this.UIMap.TransitToRegistrationFormRecordedMethod1(); //переход на стр. Регистрация
             this.UIMap.NameFormAssertMethod2(); //Проверка названия формы "Регистрация"
             this.UIMap.BtnDoneNoActiveAssertMethod2(); //Инвалидность кнопки Готово по умолчанию
-            this.UIMap.BtnDoneNoCompleteDataRecordedMethod1(); //Инвалидность кнопки Готово, если не все поля заполнены (запись)
+            this.UIMap.BtnDoneNoCompleteDataRecordedMethod1();
+                //Инвалидность кнопки Готово, если не все поля заполнены (запись)
             //   this.UIMap.BtnDoneNoCompleteDataAssertMethod2();    //Инвалидность кнопки Готово, если не все поля заполнены (атрибутами). хрень вроде
-            this.UIMap.BtnDoneFullCompleteRecordedMethod1(); //Валидность кнопки Готово, если все поля заполнены (запись)
-            this.UIMap.BtnDoneFullCompleteAssertMethod2();  //Валидность кнопки Готово, если все поля заполнены (атрибуты). походу хрень какая то   
+            this.UIMap.BtnDoneFullCompleteRecordedMethod1();
+                //Валидность кнопки Готово, если все поля заполнены (запись)
+            this.UIMap.BtnDoneFullCompleteAssertMethod2();
+                //Валидность кнопки Готово, если все поля заполнены (атрибуты). походу хрень какая то   
 
             // про числовые не вышло
         }
@@ -104,7 +107,7 @@ namespace CodedUITestProject
             this.UIMap.BtnBeginActiveAssertMethod2(); // Наличие и доступность кнопки Начать
             this.UIMap.ExistInfoFieldsAssertMethod2(); // Наличие полей с информацией 
 
-            }
+        }
 
         //Testcase 4
         [TestMethod]
@@ -112,7 +115,7 @@ namespace CodedUITestProject
 
         public void TestPageStudAppCheck()
         {
-            
+
         }
 
 
@@ -123,8 +126,9 @@ namespace CodedUITestProject
 
         public void PassingTestStudAppCheck()
         {
-            
+
 
 
         }
+    }
 }
