@@ -104,15 +104,27 @@ namespace CodedUITestProject
             this.UIMap.BtnBeginActiveAssertMethod2(); // Наличие и доступность кнопки Начать
             this.UIMap.ExistInfoFieldsAssertMethod2(); // Наличие полей с информацией 
 
+            }
+
+        //Testcase 4
+        [TestMethod]
 
 
-
-
+        public void TestPageStudAppCheck()
+        {
+            
         }
 
 
+        //Testcase 4.1
+        [TestMethod]
 
-    }
 
 
+        public void PassingTestStudAppCheck()
+        {
+            
+
+
+        }
 }
