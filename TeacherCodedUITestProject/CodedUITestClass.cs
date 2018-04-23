@@ -110,6 +110,148 @@ namespace TeacherCodedUITestProject
             Playback.Wait(1000);
         }
 
+        //Testcase 2.2.1
+        [TestMethod]
+        public void AddNewQuestionViewCheck()
+        {
+            //Открываем форму всех функции редактирования теста
+            this.UIMap.TestEditViewOpenRecorded();
+
+            //Открываем функцию добавления\редактирования вопроса
+            this.UIMap.QuestionListOpenRecorded();
+
+            //Открывем форму добавление вопроса
+            this.UIMap.QuestionAddNewViewRecorded();
+
+            Playback.Wait(1000);
+            //Проверка состояния кнопки "Добавить"
+            this.UIMap.AddQuestionView_AddBtnAssert();
+            //Проверка состояния кнопки "Удалить"
+            this.UIMap.AddQuestionView_DeleteBtnAssert();
+            //Проверка состояния кнопки "Готово"
+            this.UIMap.AddQuestionView_OkBtnAssert();
+            //Проверка состояния кнопки "Назад"
+            this.UIMap.AddQuestionView_CancelBtnAssert();
+
+            Playback.Wait(1000);
+            //Закрытие формы
+            this.UIMap.AddQuestionView_CancelRecorded();
+        }
+
+        //Testcase 2.2.2
+        [TestMethod]
+        public void AddNewQuestionAddWithoutAnswer()
+        {
+            //Открываем форму всех функции редактирования теста
+            this.UIMap.TestEditViewOpenRecorded();
+
+            //Открываем функцию добавления\редактирования вопроса
+            this.UIMap.QuestionListOpenRecorded();
+
+            //Открывем форму добавление вопроса
+            this.UIMap.QuestionAddNewViewRecorded();
+
+            //Нажимаем на кнопку "Готово" без добавления ответов
+            this.UIMap.AddQuestionView_OkWithoutAnswerRecorded();
+
+            Playback.Wait(1000);
+            //Закрытие формы
+            this.UIMap.AddQuestionView_CancelRecorded();
+
+        }
+
+        //Testcase 2.2.3
+        [TestMethod]
+        public void AddNewQuestionAddWithoutRightAnswer()
+        {
+            //Открываем форму всех функции редактирования теста
+            this.UIMap.TestEditViewOpenRecorded();
+
+            //Открываем функцию добавления\редактирования вопроса
+            this.UIMap.QuestionListOpenRecorded();
+
+            //Открывем форму добавление вопроса
+            this.UIMap.QuestionAddNewViewRecorded();
+
+            //Добавляем 3 варианта ответа
+            this.UIMap.AddQuestionView_AddAnswerRecorded();
+
+            //Нажимаем на "Готово" без указания любого ответа правильным
+            this.UIMap.AddQuestionView_OkWithoutRightAnswerRecorded();
+
+            Playback.Wait(1000);
+            //Закрытие формы
+            this.UIMap.AddQuestionView_CancelRecorded();
+
+        }
+
+        //Testcase 2.2.4
+        [TestMethod]
+        public void AddNewQuestionWithRightAnswer()
+        {
+            //Открываем форму всех функции редактирования теста
+            this.UIMap.TestEditViewOpenRecorded();
+
+            //Открываем функцию добавления\редактирования вопроса
+            this.UIMap.QuestionListOpenRecorded();
+
+            //Открывем форму добавление вопроса
+            this.UIMap.QuestionAddNewViewRecorded();
+
+            Playback.Wait(1000);
+
+            //Вводим текст вопроса
+            this.UIMap.AddQuestionView_SetQuestionTextRecorded();
+
+            Playback.Wait(1000);
+
+            //Добавляем 3 варианта ответа
+            this.UIMap.AddQuestionView_AddAnswerRecorded();
+
+            Playback.Wait(1000);
+
+            //Помечаем первый вопрос правильным
+            this.UIMap.AddQuestionView_CheckFirstAnswerRightRecorded();
+
+            //Нажимаем "Готово"
+            this.UIMap.AddQuestionView_OkRecorded();
+
+            //Проверяем что вопрос добавился в список
+            this.UIMap.AddQuestionView_QustionItemAddedAssert();
+
+        }
+
+        //Testcase 2.2.6
+        [TestMethod]
+        public void AddNewQuestionWithoutQuestionName()
+        {
+            //Открываем форму всех функции редактирования теста
+            this.UIMap.TestEditViewOpenRecorded();
+
+            //Открываем функцию добавления\редактирования вопроса
+            this.UIMap.QuestionListOpenRecorded();
+
+            //Открывем форму добавление вопроса
+            this.UIMap.QuestionAddNewViewRecorded();
+
+
+            Playback.Wait(1000);
+
+            //Добавляем 3 варианта ответа
+            this.UIMap.AddQuestionView_AddAnswerRecorded();
+
+            Playback.Wait(1000);
+
+            //Помечаем первый вопрос правильным
+            this.UIMap.AddQuestionView_CheckFirstAnswerRightRecorded();
+
+            //Нажимаем на "Готово" без добавления текста вопроса
+            this.UIMap.AddQuestionView_OkWithoutQuestionTextRecorded();
+
+            //Закрытие формы
+            this.UIMap.AddQuestionView_CancelRecorded();
+        }
+
         #endregion Тестовые сценарии
 
         /// <summary>
